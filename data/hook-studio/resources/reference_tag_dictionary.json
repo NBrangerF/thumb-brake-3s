@@ -1,0 +1,4809 @@
+{
+  "version": "v0",
+  "reference_roles": [
+    "motion",
+    "style",
+    "first_frame",
+    "scene",
+    "cultural_symbol",
+    "product"
+  ],
+  "motion_tag_families": [
+    "disgust_trigger",
+    "before_after",
+    "child_mess_incident",
+    "pet_disaster",
+    "danger_threshold",
+    "kitchen_failure",
+    "speed_demo",
+    "result_proof",
+    "social_gaze",
+    "identity_projection",
+    "outfit_emergency",
+    "era_style",
+    "beauty_embarrassment",
+    "proof_closeup",
+    "testimonial_line",
+    "before_reveal",
+    "room_chaos",
+    "social_visit_crisis",
+    "chaos_to_order",
+    "partner_conflict",
+    "sound_hit",
+    "texture_macro",
+    "first_bite",
+    "sensory_overload",
+    "social_embarrassment",
+    "disgust_trigger",
+    "repair_result",
+    "pain_anticipation",
+    "parent_child_conflict",
+    "daily_scene",
+    "rescue_setup",
+    "safety_proof",
+    "pet_disaster",
+    "cute_reaction",
+    "odor_problem",
+    "hair_cleanup",
+    "work_deadline_shock",
+    "counterintuitive_claim",
+    "result_compression",
+    "boss_interrupt",
+    "mistake_reminder",
+    "parent_anxiety",
+    "before_after",
+    "loss_aversion",
+    "body_challenge",
+    "proof_closeup",
+    "motion_shock",
+    "social_proof"
+  ],
+  "first_frame_reference_types": [
+    "ref_first_frame_003",
+    "ref_first_frame_009",
+    "ref_first_frame_015",
+    "ref_first_frame_021",
+    "ref_first_frame_027",
+    "ref_first_frame_033",
+    "ref_first_frame_039",
+    "ref_first_frame_045",
+    "ref_first_frame_051",
+    "ref_first_frame_057",
+    "ref_first_frame_063",
+    "ref_first_frame_069",
+    "ref_first_frame_075",
+    "ref_first_frame_081",
+    "ref_first_frame_087",
+    "ref_first_frame_093",
+    "ref_first_frame_099",
+    "ref_first_frame_105",
+    "ref_first_frame_111",
+    "ref_first_frame_117"
+  ],
+  "visual_style_reference_types": [
+    "ref_style_002",
+    "ref_style_008",
+    "ref_style_014",
+    "ref_style_020",
+    "ref_style_026",
+    "ref_style_032",
+    "ref_style_038",
+    "ref_style_044",
+    "ref_style_050",
+    "ref_style_056",
+    "ref_style_062",
+    "ref_style_068",
+    "ref_style_074",
+    "ref_style_080",
+    "ref_style_086",
+    "ref_style_092",
+    "ref_style_098",
+    "ref_style_104",
+    "ref_style_110",
+    "ref_style_116"
+  ],
+  "cultural_symbol_reference_types": [
+    "ref_cultural_symbol_005",
+    "ref_cultural_symbol_011",
+    "ref_cultural_symbol_017",
+    "ref_cultural_symbol_023",
+    "ref_cultural_symbol_029",
+    "ref_cultural_symbol_035",
+    "ref_cultural_symbol_041",
+    "ref_cultural_symbol_047",
+    "ref_cultural_symbol_053",
+    "ref_cultural_symbol_059",
+    "ref_cultural_symbol_065",
+    "ref_cultural_symbol_071",
+    "ref_cultural_symbol_077",
+    "ref_cultural_symbol_083",
+    "ref_cultural_symbol_089",
+    "ref_cultural_symbol_095",
+    "ref_cultural_symbol_101",
+    "ref_cultural_symbol_107",
+    "ref_cultural_symbol_113",
+    "ref_cultural_symbol_119"
+  ],
+  "reference_assets": [
+    {
+      "asset_id": "ref_motion_001",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_COLOR_SHOCK_001",
+        "H1_MOTION_SHOCK_002",
+        "H1_SOUND_HIT_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_002",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_MOTION_SHOCK_002",
+        "H1_SOUND_HIT_003",
+        "H1_FREEZE_FRAME_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_003",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_SOUND_HIT_003",
+        "H1_FREEZE_FRAME_004",
+        "H1_VISUAL_CONTRAST_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_004",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_FREEZE_FRAME_004",
+        "H1_VISUAL_CONTRAST_005",
+        "H1_COLOR_SHOCK_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_005",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_VISUAL_CONTRAST_005",
+        "H1_COLOR_SHOCK_006",
+        "H1_MOTION_SHOCK_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_006",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_COLOR_SHOCK_006",
+        "H1_MOTION_SHOCK_007",
+        "H1_SOUND_HIT_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_007",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_MOTION_SHOCK_007",
+        "H1_SOUND_HIT_008",
+        "H1_FREEZE_FRAME_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_008",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_SOUND_HIT_008",
+        "H1_FREEZE_FRAME_009",
+        "H1_VISUAL_CONTRAST_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_009",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_FREEZE_FRAME_009",
+        "H1_VISUAL_CONTRAST_010",
+        "H1_COLOR_SHOCK_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_010",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_VISUAL_CONTRAST_010",
+        "H1_COLOR_SHOCK_011",
+        "H1_MOTION_SHOCK_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_011",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_COLOR_SHOCK_011",
+        "H1_MOTION_SHOCK_012",
+        "H1_SOUND_HIT_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_012",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_MOTION_SHOCK_012",
+        "H1_SOUND_HIT_013",
+        "H1_FREEZE_FRAME_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_013",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_SOUND_HIT_013",
+        "H1_FREEZE_FRAME_014",
+        "H1_VISUAL_CONTRAST_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_014",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_FREEZE_FRAME_014",
+        "H1_VISUAL_CONTRAST_015",
+        "H2_DANGER_THRESHOLD_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_015",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H1_VISUAL_CONTRAST_015",
+        "H2_DANGER_THRESHOLD_001",
+        "H2_PAIN_ANTICIPATION_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_016",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DANGER_THRESHOLD_001",
+        "H2_PAIN_ANTICIPATION_002",
+        "H2_DISGUST_TRIGGER_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_017",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_PAIN_ANTICIPATION_002",
+        "H2_DISGUST_TRIGGER_003",
+        "H2_SOCIAL_EMBARRASSMENT_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_018",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DISGUST_TRIGGER_003",
+        "H2_SOCIAL_EMBARRASSMENT_004",
+        "H2_CONFLICT_SHOCK_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_019",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SOCIAL_EMBARRASSMENT_004",
+        "H2_CONFLICT_SHOCK_005",
+        "H2_TABOO_HINT_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_020",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_CONFLICT_SHOCK_005",
+        "H2_TABOO_HINT_006",
+        "H2_SENSORY_OVERLOAD_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_021",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_TABOO_HINT_006",
+        "H2_SENSORY_OVERLOAD_007",
+        "H2_DANGER_THRESHOLD_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_022",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SENSORY_OVERLOAD_007",
+        "H2_DANGER_THRESHOLD_008",
+        "H2_PAIN_ANTICIPATION_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_023",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DANGER_THRESHOLD_008",
+        "H2_PAIN_ANTICIPATION_009",
+        "H2_DISGUST_TRIGGER_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_024",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_PAIN_ANTICIPATION_009",
+        "H2_DISGUST_TRIGGER_010",
+        "H2_SOCIAL_EMBARRASSMENT_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_025",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DISGUST_TRIGGER_010",
+        "H2_SOCIAL_EMBARRASSMENT_011",
+        "H2_CONFLICT_SHOCK_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_026",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SOCIAL_EMBARRASSMENT_011",
+        "H2_CONFLICT_SHOCK_012",
+        "H2_TABOO_HINT_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_027",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_CONFLICT_SHOCK_012",
+        "H2_TABOO_HINT_013",
+        "H2_SENSORY_OVERLOAD_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_028",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_TABOO_HINT_013",
+        "H2_SENSORY_OVERLOAD_014",
+        "H2_DANGER_THRESHOLD_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_029",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SENSORY_OVERLOAD_014",
+        "H2_DANGER_THRESHOLD_015",
+        "H2_PAIN_ANTICIPATION_016"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_030",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DANGER_THRESHOLD_015",
+        "H2_PAIN_ANTICIPATION_016",
+        "H2_DISGUST_TRIGGER_017"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_031",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_PAIN_ANTICIPATION_016",
+        "H2_DISGUST_TRIGGER_017",
+        "H2_SOCIAL_EMBARRASSMENT_018"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_032",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DISGUST_TRIGGER_017",
+        "H2_SOCIAL_EMBARRASSMENT_018",
+        "H2_CONFLICT_SHOCK_019"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_033",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SOCIAL_EMBARRASSMENT_018",
+        "H2_CONFLICT_SHOCK_019",
+        "H2_TABOO_HINT_020"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_034",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_CONFLICT_SHOCK_019",
+        "H2_TABOO_HINT_020",
+        "H2_SENSORY_OVERLOAD_021"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_035",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_TABOO_HINT_020",
+        "H2_SENSORY_OVERLOAD_021",
+        "H2_DANGER_THRESHOLD_022"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_036",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SENSORY_OVERLOAD_021",
+        "H2_DANGER_THRESHOLD_022",
+        "H2_PAIN_ANTICIPATION_023"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_037",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DANGER_THRESHOLD_022",
+        "H2_PAIN_ANTICIPATION_023",
+        "H2_DISGUST_TRIGGER_024"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_038",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_PAIN_ANTICIPATION_023",
+        "H2_DISGUST_TRIGGER_024",
+        "H2_SOCIAL_EMBARRASSMENT_025"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_039",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_DISGUST_TRIGGER_024",
+        "H2_SOCIAL_EMBARRASSMENT_025",
+        "H3_UNFINISHED_ACTION_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_040",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H2_SOCIAL_EMBARRASSMENT_025",
+        "H3_UNFINISHED_ACTION_001",
+        "H3_COUNTERINTUITIVE_CLAIM_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_041",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_UNFINISHED_ACTION_001",
+        "H3_COUNTERINTUITIVE_CLAIM_002",
+        "H3_MYSTERY_RESULT_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_042",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_COUNTERINTUITIVE_CLAIM_002",
+        "H3_MYSTERY_RESULT_003",
+        "H3_HIDDEN_CAUSE_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_043",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_MYSTERY_RESULT_003",
+        "H3_HIDDEN_CAUSE_004",
+        "H3_BEFORE_REVEAL_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_044",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_HIDDEN_CAUSE_004",
+        "H3_BEFORE_REVEAL_005",
+        "H3_UNFINISHED_ACTION_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_045",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_BEFORE_REVEAL_005",
+        "H3_UNFINISHED_ACTION_006",
+        "H3_COUNTERINTUITIVE_CLAIM_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_046",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_UNFINISHED_ACTION_006",
+        "H3_COUNTERINTUITIVE_CLAIM_007",
+        "H3_MYSTERY_RESULT_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_047",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_COUNTERINTUITIVE_CLAIM_007",
+        "H3_MYSTERY_RESULT_008",
+        "H3_HIDDEN_CAUSE_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_048",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_MYSTERY_RESULT_008",
+        "H3_HIDDEN_CAUSE_009",
+        "H3_BEFORE_REVEAL_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_049",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_HIDDEN_CAUSE_009",
+        "H3_BEFORE_REVEAL_010",
+        "H3_UNFINISHED_ACTION_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_050",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_BEFORE_REVEAL_010",
+        "H3_UNFINISHED_ACTION_011",
+        "H3_COUNTERINTUITIVE_CLAIM_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_051",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_UNFINISHED_ACTION_011",
+        "H3_COUNTERINTUITIVE_CLAIM_012",
+        "H3_MYSTERY_RESULT_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_052",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_COUNTERINTUITIVE_CLAIM_012",
+        "H3_MYSTERY_RESULT_013",
+        "H3_HIDDEN_CAUSE_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_053",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_MYSTERY_RESULT_013",
+        "H3_HIDDEN_CAUSE_014",
+        "H3_BEFORE_REVEAL_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_054",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_HIDDEN_CAUSE_014",
+        "H3_BEFORE_REVEAL_015",
+        "H4_IDENTITY_CALLOUT_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_055",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H3_BEFORE_REVEAL_015",
+        "H4_IDENTITY_CALLOUT_001",
+        "H4_PAIN_POINT_CALLOUT_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_056",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_IDENTITY_CALLOUT_001",
+        "H4_PAIN_POINT_CALLOUT_002",
+        "H4_MISTAKE_REMINDER_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_057",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_PAIN_POINT_CALLOUT_002",
+        "H4_MISTAKE_REMINDER_003",
+        "H4_LOSS_AVERSION_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_058",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_MISTAKE_REMINDER_003",
+        "H4_LOSS_AVERSION_004",
+        "H4_DAILY_SCENE_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_059",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_LOSS_AVERSION_004",
+        "H4_DAILY_SCENE_005",
+        "H4_IDENTITY_CALLOUT_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_060",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_DAILY_SCENE_005",
+        "H4_IDENTITY_CALLOUT_006",
+        "H4_PAIN_POINT_CALLOUT_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_061",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_IDENTITY_CALLOUT_006",
+        "H4_PAIN_POINT_CALLOUT_007",
+        "H4_MISTAKE_REMINDER_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_062",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_PAIN_POINT_CALLOUT_007",
+        "H4_MISTAKE_REMINDER_008",
+        "H4_LOSS_AVERSION_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_063",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_MISTAKE_REMINDER_008",
+        "H4_LOSS_AVERSION_009",
+        "H4_DAILY_SCENE_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_064",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_LOSS_AVERSION_009",
+        "H4_DAILY_SCENE_010",
+        "H4_IDENTITY_CALLOUT_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_065",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_DAILY_SCENE_010",
+        "H4_IDENTITY_CALLOUT_011",
+        "H4_PAIN_POINT_CALLOUT_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_066",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_IDENTITY_CALLOUT_011",
+        "H4_PAIN_POINT_CALLOUT_012",
+        "H4_MISTAKE_REMINDER_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_067",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_PAIN_POINT_CALLOUT_012",
+        "H4_MISTAKE_REMINDER_013",
+        "H4_LOSS_AVERSION_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_068",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_MISTAKE_REMINDER_013",
+        "H4_LOSS_AVERSION_014",
+        "H4_DAILY_SCENE_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_069",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_LOSS_AVERSION_014",
+        "H4_DAILY_SCENE_015",
+        "H4_IDENTITY_CALLOUT_016"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_070",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_DAILY_SCENE_015",
+        "H4_IDENTITY_CALLOUT_016",
+        "H4_PAIN_POINT_CALLOUT_017"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_071",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_IDENTITY_CALLOUT_016",
+        "H4_PAIN_POINT_CALLOUT_017",
+        "H4_MISTAKE_REMINDER_018"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_072",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_PAIN_POINT_CALLOUT_017",
+        "H4_MISTAKE_REMINDER_018",
+        "H4_LOSS_AVERSION_019"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_073",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_MISTAKE_REMINDER_018",
+        "H4_LOSS_AVERSION_019",
+        "H4_DAILY_SCENE_020"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_074",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_LOSS_AVERSION_019",
+        "H4_DAILY_SCENE_020",
+        "H5_PRODUCT_FIRST_DEMO_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_075",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H4_DAILY_SCENE_020",
+        "H5_PRODUCT_FIRST_DEMO_001",
+        "H5_BEFORE_AFTER_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_076",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PRODUCT_FIRST_DEMO_001",
+        "H5_BEFORE_AFTER_002",
+        "H5_RESULT_COMPRESSION_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_077",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_BEFORE_AFTER_002",
+        "H5_RESULT_COMPRESSION_003",
+        "H5_SOCIAL_PROOF_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_078",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_RESULT_COMPRESSION_003",
+        "H5_SOCIAL_PROOF_004",
+        "H5_PROOF_CLOSEUP_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_079",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_SOCIAL_PROOF_004",
+        "H5_PROOF_CLOSEUP_005",
+        "H5_PRODUCT_FIRST_DEMO_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_080",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PROOF_CLOSEUP_005",
+        "H5_PRODUCT_FIRST_DEMO_006",
+        "H5_BEFORE_AFTER_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_081",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PRODUCT_FIRST_DEMO_006",
+        "H5_BEFORE_AFTER_007",
+        "H5_RESULT_COMPRESSION_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_082",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_BEFORE_AFTER_007",
+        "H5_RESULT_COMPRESSION_008",
+        "H5_SOCIAL_PROOF_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_083",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_RESULT_COMPRESSION_008",
+        "H5_SOCIAL_PROOF_009",
+        "H5_PROOF_CLOSEUP_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_084",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_SOCIAL_PROOF_009",
+        "H5_PROOF_CLOSEUP_010",
+        "H5_PRODUCT_FIRST_DEMO_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_085",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PROOF_CLOSEUP_010",
+        "H5_PRODUCT_FIRST_DEMO_011",
+        "H5_BEFORE_AFTER_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_086",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PRODUCT_FIRST_DEMO_011",
+        "H5_BEFORE_AFTER_012",
+        "H5_RESULT_COMPRESSION_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_087",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_BEFORE_AFTER_012",
+        "H5_RESULT_COMPRESSION_013",
+        "H5_SOCIAL_PROOF_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_088",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_RESULT_COMPRESSION_013",
+        "H5_SOCIAL_PROOF_014",
+        "H5_PROOF_CLOSEUP_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_089",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_SOCIAL_PROOF_014",
+        "H5_PROOF_CLOSEUP_015",
+        "H5_PRODUCT_FIRST_DEMO_016"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_090",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PROOF_CLOSEUP_015",
+        "H5_PRODUCT_FIRST_DEMO_016",
+        "H5_BEFORE_AFTER_017"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_091",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PRODUCT_FIRST_DEMO_016",
+        "H5_BEFORE_AFTER_017",
+        "H5_RESULT_COMPRESSION_018"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_092",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_BEFORE_AFTER_017",
+        "H5_RESULT_COMPRESSION_018",
+        "H5_SOCIAL_PROOF_019"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_093",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_RESULT_COMPRESSION_018",
+        "H5_SOCIAL_PROOF_019",
+        "H5_PROOF_CLOSEUP_020"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_094",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_SOCIAL_PROOF_019",
+        "H5_PROOF_CLOSEUP_020",
+        "H6_DIRECT_GAZE_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_095",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H5_PROOF_CLOSEUP_020",
+        "H6_DIRECT_GAZE_001",
+        "H6_SHOCKED_FACE_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_096",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_DIRECT_GAZE_001",
+        "H6_SHOCKED_FACE_002",
+        "H6_GAZE_CUE_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_097",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_SHOCKED_FACE_002",
+        "H6_GAZE_CUE_003",
+        "H6_TESTIMONIAL_LINE_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_098",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_GAZE_CUE_003",
+        "H6_TESTIMONIAL_LINE_004",
+        "H6_CROWD_REACTION_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_099",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_TESTIMONIAL_LINE_004",
+        "H6_CROWD_REACTION_005",
+        "H6_COMMENT_OVERLAY_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_100",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_CROWD_REACTION_005",
+        "H6_COMMENT_OVERLAY_006",
+        "H6_DIRECT_GAZE_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_101",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_COMMENT_OVERLAY_006",
+        "H6_DIRECT_GAZE_007",
+        "H6_SHOCKED_FACE_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_102",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_DIRECT_GAZE_007",
+        "H6_SHOCKED_FACE_008",
+        "H6_GAZE_CUE_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_103",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_SHOCKED_FACE_008",
+        "H6_GAZE_CUE_009",
+        "H6_TESTIMONIAL_LINE_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_104",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_GAZE_CUE_009",
+        "H6_TESTIMONIAL_LINE_010",
+        "H6_CROWD_REACTION_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_105",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_TESTIMONIAL_LINE_010",
+        "H6_CROWD_REACTION_011",
+        "H6_COMMENT_OVERLAY_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_106",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_CROWD_REACTION_011",
+        "H6_COMMENT_OVERLAY_012",
+        "H6_DIRECT_GAZE_013"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_107",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_COMMENT_OVERLAY_012",
+        "H6_DIRECT_GAZE_013",
+        "H6_SHOCKED_FACE_014"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_108",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_DIRECT_GAZE_013",
+        "H6_SHOCKED_FACE_014",
+        "H6_GAZE_CUE_015"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_109",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "cleaning",
+        "food_beverage"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "disgust_trigger",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_cleaning"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_SHOCKED_FACE_014",
+        "H6_GAZE_CUE_015",
+        "H7_MEME_STRUCTURE_001"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_110",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "kitchen_tools",
+        "personal_care"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "danger_threshold",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_kitchen_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H6_GAZE_CUE_015",
+        "H7_MEME_STRUCTURE_001",
+        "H7_GENRE_COLD_OPEN_002"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_111",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "womenswear",
+        "mother_baby"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "social_gaze",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_womenswear"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_MEME_STRUCTURE_001",
+        "H7_GENRE_COLD_OPEN_002",
+        "H7_ERA_STYLE_003"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_112",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "beauty",
+        "pet"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "beauty_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_beauty"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_GENRE_COLD_OPEN_002",
+        "H7_ERA_STYLE_003",
+        "H7_SYMBOLIC_OBJECT_PAIR_004"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_113",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "storage_home",
+        "ai_tools"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "room_chaos",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_storage_home"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_ERA_STYLE_003",
+        "H7_SYMBOLIC_OBJECT_PAIR_004",
+        "H7_PLATFORM_GRAMMAR_005"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_114",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H2",
+        "H4"
+      ],
+      "category_fit": [
+        "food_beverage",
+        "education"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "sound_hit",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_food_beverage"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_SYMBOLIC_OBJECT_PAIR_004",
+        "H7_PLATFORM_GRAMMAR_005",
+        "H7_PARODY_STRUCTURE_006"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_motion_115",
+      "asset_type": "video",
+      "source_type": "system_library",
+      "reference_role": "motion",
+      "hook_type_fit": [
+        "H3",
+        "H5"
+      ],
+      "category_fit": [
+        "personal_care",
+        "sports_fitness"
+      ],
+      "motion_tags": [
+        "motion_cue",
+        "social_embarrassment",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_personal_care"
+      ],
+      "generation_mode_fit": [
+        "video_reference",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_PLATFORM_GRAMMAR_005",
+        "H7_PARODY_STRUCTURE_006",
+        "H7_MEME_STRUCTURE_007"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_style_116",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "style",
+      "hook_type_fit": [
+        "H4",
+        "H6"
+      ],
+      "category_fit": [
+        "mother_baby",
+        "cleaning"
+      ],
+      "motion_tags": [
+        "style_cue",
+        "parent_child_conflict",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_mother_baby"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_PARODY_STRUCTURE_006",
+        "H7_MEME_STRUCTURE_007",
+        "H7_GENRE_COLD_OPEN_008"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_first_frame_117",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "first_frame",
+      "hook_type_fit": [
+        "H5",
+        "H7"
+      ],
+      "category_fit": [
+        "pet",
+        "kitchen_tools"
+      ],
+      "motion_tags": [
+        "first_frame_cue",
+        "pet_disaster",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_pet"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_MEME_STRUCTURE_007",
+        "H7_GENRE_COLD_OPEN_008",
+        "H7_ERA_STYLE_009"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_scene_118",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "scene",
+      "hook_type_fit": [
+        "H6",
+        "H1"
+      ],
+      "category_fit": [
+        "ai_tools",
+        "womenswear"
+      ],
+      "motion_tags": [
+        "scene_cue",
+        "work_deadline_shock",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_ai_tools"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_GENRE_COLD_OPEN_008",
+        "H7_ERA_STYLE_009",
+        "H7_SYMBOLIC_OBJECT_PAIR_010"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_cultural_symbol_119",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "cultural_symbol",
+      "hook_type_fit": [
+        "H7",
+        "H2"
+      ],
+      "category_fit": [
+        "education",
+        "beauty"
+      ],
+      "motion_tags": [
+        "cultural_symbol_cue",
+        "mistake_reminder",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_education"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_ERA_STYLE_009",
+        "H7_SYMBOLIC_OBJECT_PAIR_010",
+        "H7_PLATFORM_GRAMMAR_011"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    },
+    {
+      "asset_id": "ref_product_120",
+      "asset_type": "image",
+      "source_type": "system_library",
+      "reference_role": "product",
+      "hook_type_fit": [
+        "H1",
+        "H3"
+      ],
+      "category_fit": [
+        "sports_fitness",
+        "storage_home"
+      ],
+      "motion_tags": [
+        "product_cue",
+        "body_challenge",
+        "phone_readable"
+      ],
+      "style_tags": [
+        "douyin_ugc",
+        "commerce_clear",
+        "category_sports_fitness"
+      ],
+      "generation_mode_fit": [
+        "first_frame",
+        "hybrid"
+      ],
+      "linked_pattern_cards": [
+        "H7_SYMBOLIC_OBJECT_PAIR_010",
+        "H7_PLATFORM_GRAMMAR_011",
+        "H7_PARODY_STRUCTURE_012"
+      ],
+      "usage_count": 0,
+      "success_notes": "Seed reference tag; attach actual asset only after governance review.",
+      "source_metadata": {
+        "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+      },
+      "status": "active"
+    }
+  ]
+}

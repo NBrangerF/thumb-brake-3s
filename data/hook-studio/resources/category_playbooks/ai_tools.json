@@ -1,0 +1,99 @@
+{
+  "id": "playbook_ai_tools",
+  "category_id": "ai_tools",
+  "category_name": "AI Tools",
+  "recommended_hooks": [
+    "H1_FREEZE_FRAME_004",
+    "H1_FREEZE_FRAME_009",
+    "H2_DANGER_THRESHOLD_001",
+    "H2_TABOO_HINT_006",
+    "H2_TABOO_HINT_013"
+  ],
+  "exploratory_hooks": [
+    "H2_SOCIAL_EMBARRASSMENT_018",
+    "H2_SOCIAL_EMBARRASSMENT_025",
+    "H3_BEFORE_REVEAL_005",
+    "H3_COUNTERINTUITIVE_CLAIM_012",
+    "H4_PAIN_POINT_CALLOUT_002"
+  ],
+  "high_arousal_hooks": [
+    "H1_FREEZE_FRAME_004",
+    "H2_DANGER_THRESHOLD_001",
+    "H2_TABOO_HINT_006"
+  ],
+  "conflict_narrative_hooks": [
+    "H2_DANGER_THRESHOLD_001",
+    "H2_TABOO_HINT_013",
+    "H2_SOCIAL_EMBARRASSMENT_025"
+  ],
+  "cultural_hooks": [
+    "H1_FREEZE_FRAME_004",
+    "H1_FREEZE_FRAME_009",
+    "H7_GENRE_COLD_OPEN_002"
+  ],
+  "non_fit_observations": [
+    "Pure attention decoys that cannot reconnect to product value within 5 seconds.",
+    "Trend mimicry that makes the borrowed cultural surface more memorable than the product."
+  ],
+  "priority_matrix": {
+    "strongest_mechanisms": [
+      "work_deadline_shock",
+      "counterintuitive_claim",
+      "result_compression",
+      "boss_interrupt"
+    ],
+    "default_generation_modes": [
+      "hybrid",
+      "first_frame",
+      "video_reference"
+    ],
+    "avoid_when": [
+      "no product bridge",
+      "unreadable first frame",
+      "overloaded text"
+    ]
+  },
+  "source_metadata": {
+    "research_basis": [
+      {
+        "source_id": "tiktok_top_ads",
+        "title": "TikTok Top Ads",
+        "url": "https://ads.us.tiktok.com/help/article/top-ads?lang=en",
+        "distilled_use": "Use region, industry, objective filters and second-by-second creative analysis as observation structure, not as copied creative."
+      },
+      {
+        "source_id": "tiktok_keyword_insights",
+        "title": "TikTok Keyword Insights",
+        "url": "https://ads.us.tiktok.com/help/article/keyword-insights?lang=en",
+        "distilled_use": "Use keyword/category phrase patterns to guide text criteria and category copy slots."
+      },
+      {
+        "source_id": "tiktok_creative_center",
+        "title": "TikTok Creative Center",
+        "url": "https://ads.tiktok.com/business/creativecenter/mobile/en",
+        "distilled_use": "Use official trend discovery and creative-tip framing for platform observation metadata."
+      },
+      {
+        "source_id": "meta_ad_library",
+        "title": "Meta Ad Library",
+        "url": "https://www.facebook.com/help/259468828226154/",
+        "distilled_use": "Use active-ad observation as competitive research boundary; do not copy creator lines or raw assets."
+      },
+      {
+        "source_id": "google_ads_transparency_center",
+        "title": "Google Ads Transparency Center",
+        "url": "https://blog.google/innovation-and-ai/technology/ads/announcing-the-launch-of-the-new-ads-transparency-center/",
+        "distilled_use": "Use verified advertiser lookup as source boundary for cross-platform observations."
+      }
+    ],
+    "local_resource_basis": [
+      "docs/fashion-first-frame-sdk/fashion_mood_affective_resources_library.md",
+      "docs/fashion-first-frame-sdk/fashion_multimodal_resources_library_v1.md",
+      "docs/fashion-first-frame-sdk/fashion_visual_realization_scholarly_resources_library.md",
+      "src/main/resources/seedance/seedance_llm_pipeline_0508_douyin_trend_modes/resources/ecommerce_playbooks.md",
+      "src/main/resources/seedance/seedance_llm_pipeline_0508_douyin_trend_modes/resources/video_mode_v2/douyin_video_mode_library.md"
+    ],
+    "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+  },
+  "status": "active"
+}

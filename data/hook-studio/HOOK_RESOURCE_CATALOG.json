@@ -1,0 +1,96 @@
+{
+  "version": "v0",
+  "generated_at": "2026-05-13",
+  "resources": [
+    "resources/hook_taxonomy.md",
+    "resources/hook_criteria_library.md",
+    "resources/hook_mood_library.json",
+    "prompt-playbooks/first_frame_ugc_prompt_playbook.md",
+    "resources/reference_tag_dictionary.json",
+    "resources/pattern_cards/v0_pattern_cards.jsonl",
+    "resources/pattern_cards/product_independent_pattern_cards.jsonl",
+    "resources/trend_observations/v0_trend_observations.jsonl",
+    "culture_sources.jsonl",
+    "culture_symbol_entries.jsonl",
+    "culture_hook_templates.jsonl"
+  ],
+  "category_playbooks": [
+    "cleaning",
+    "kitchen_tools",
+    "womenswear",
+    "beauty",
+    "storage_home",
+    "food_beverage",
+    "personal_care",
+    "mother_baby",
+    "pet",
+    "ai_tools",
+    "education",
+    "sports_fitness"
+  ],
+  "coverage_targets": {
+    "pattern_cards": 125,
+    "hook_type_counts": {
+      "H1": 15,
+      "H2": 25,
+      "H3": 15,
+      "H4": 20,
+      "H5": 20,
+      "H6": 15,
+      "H7": 15
+    },
+    "category_playbooks": 12,
+    "reference_assets": 120,
+    "trend_observations": 24,
+    "culture_borrowing": {
+      "planned_symbol_entries": 1200,
+      "seed_source_families": 24,
+      "seed_symbol_entries": 1200,
+      "seed_hook_templates": 120,
+      "generated_at": "2026-05-15T11:27:41.430Z"
+    }
+  },
+  "source_metadata": {
+    "research_basis": [
+      {
+        "source_id": "tiktok_top_ads",
+        "title": "TikTok Top Ads",
+        "url": "https://ads.us.tiktok.com/help/article/top-ads?lang=en",
+        "distilled_use": "Use region, industry, objective filters and second-by-second creative analysis as observation structure, not as copied creative."
+      },
+      {
+        "source_id": "tiktok_keyword_insights",
+        "title": "TikTok Keyword Insights",
+        "url": "https://ads.us.tiktok.com/help/article/keyword-insights?lang=en",
+        "distilled_use": "Use keyword/category phrase patterns to guide text criteria and category copy slots."
+      },
+      {
+        "source_id": "tiktok_creative_center",
+        "title": "TikTok Creative Center",
+        "url": "https://ads.tiktok.com/business/creativecenter/mobile/en",
+        "distilled_use": "Use official trend discovery and creative-tip framing for platform observation metadata."
+      },
+      {
+        "source_id": "meta_ad_library",
+        "title": "Meta Ad Library",
+        "url": "https://www.facebook.com/help/259468828226154/",
+        "distilled_use": "Use active-ad observation as competitive research boundary; do not copy creator lines or raw assets."
+      },
+      {
+        "source_id": "google_ads_transparency_center",
+        "title": "Google Ads Transparency Center",
+        "url": "https://blog.google/innovation-and-ai/technology/ads/announcing-the-launch-of-the-new-ads-transparency-center/",
+        "distilled_use": "Use verified advertiser lookup as source boundary for cross-platform observations."
+      }
+    ],
+    "local_resource_basis": [
+      "docs/fashion-first-frame-sdk/fashion_mood_affective_resources_library.md",
+      "docs/fashion-first-frame-sdk/fashion_multimodal_resources_library_v1.md",
+      "docs/fashion-first-frame-sdk/fashion_visual_realization_scholarly_resources_library.md",
+      "src/main/resources/seedance/seedance_llm_pipeline_0508_douyin_trend_modes/resources/ecommerce_playbooks.md",
+      "src/main/resources/seedance/seedance_llm_pipeline_0508_douyin_trend_modes/resources/video_mode_v2/douyin_video_mode_library.md",
+      "docs/hook-studio/hook_studio_culture_borrowing_library_plan.md"
+    ],
+    "storage_policy": "Store distilled reusable grammar only; do not store raw transcripts, usernames, exact creative copies, or downloaded ad assets."
+  }
+}

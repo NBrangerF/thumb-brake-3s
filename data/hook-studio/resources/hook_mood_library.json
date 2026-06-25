@@ -1,0 +1,154 @@
+{
+  "version": "v0",
+  "source_prds": [
+    "hook_library_construction_prd_v_0.md",
+    "hook_studio_prd_v_0.md"
+  ],
+  "purpose": "Define the emotional paths used by Hook Studio Pattern Cards and provide enough intra-mood variance for concept generation and recommendation diversity.",
+  "mood_paths": [
+    {
+      "id": "tension_to_relief",
+      "display_name": "紧张到释然",
+      "definition": "Open with an impending mistake, deadline, safety concern, or fragile moment, then release pressure by showing that the product or product-relevant action restores control.",
+      "commerce_role": "Best for products that prevent failure, reduce friction, protect users, or make a stressful task feel manageable.",
+      "common_categories": ["kitchen_tools", "cleaning", "mother_baby", "sports_fitness", "personal_care"],
+      "arousal_profile": { "start": "tension", "turn": "intervention", "end": "relief", "intensity_range": ["S1", "S2", "S3"] },
+      "product_bridge_logic": "The product must appear as the believable prevention, stabilizer, or shortcut before the viewer feels tricked by the opening pressure.",
+      "preferred_generation_modes": ["video_reference", "hybrid"],
+      "variants": [
+        { "id": "near_miss_prevention", "trigger": "danger_threshold", "modality": "motion_first", "narrative_function": "crisis_escalation", "example_structure": "0-1s show a near miss; 1-3s introduce product control; 3-5s show the task completed safely.", "reference_needs": ["video_motion_reference", "product_reference"] },
+        { "id": "deadline_pressure_release", "trigger": "work_deadline_shock", "modality": "text_first", "narrative_function": "incident_trigger", "example_structure": "0-1s deadline or demand appears; 1-3s product/tool handles the load; 3-5s show finished output.", "reference_needs": ["first_frame_reference", "scene_reference"] },
+        { "id": "parent_anxiety_rescue", "trigger": "parent_anxiety", "modality": "face_first", "narrative_function": "rescue_setup", "example_structure": "0-1s caregiver notices a problem; 1-3s product resolves the friction; 3-5s child or home state calms.", "reference_needs": ["scene_reference", "product_reference"] },
+        { "id": "body_challenge_control", "trigger": "body_challenge", "modality": "motion_first", "narrative_function": "transformation_setup", "example_structure": "0-1s show strain or instability; 1-3s product enables control; 3-5s show a stable result.", "reference_needs": ["video_motion_reference", "product_reference"] },
+        { "id": "mistake_intercept", "trigger": "mistake_reminder", "modality": "text_first", "narrative_function": "incident_trigger", "example_structure": "0-1s call out a common mistake; 1-3s reveal product fix; 3-5s show avoided loss.", "reference_needs": ["first_frame_reference", "scene_reference"] }
+      ],
+      "negative_boundary": "Do not exaggerate danger beyond what the product can plausibly solve."
+    },
+    {
+      "id": "disgust_to_satisfaction",
+      "display_name": "厌恶到爽感",
+      "definition": "Start with dirt, residue, odor, mess, or texture discomfort, then move toward a visibly cleaner or more pleasant state.",
+      "commerce_role": "Best for cleaning, personal care, pet, food handling, and any product with a visible before/after payoff.",
+      "common_categories": ["cleaning", "personal_care", "pet", "kitchen_tools", "beauty"],
+      "arousal_profile": { "start": "disgust", "turn": "cleaning_or_repair", "end": "satisfaction", "intensity_range": ["S1", "S2", "S3"] },
+      "product_bridge_logic": "The unpleasant cue must create a direct product-relevant need, and the payoff must be visible rather than only claimed.",
+      "preferred_generation_modes": ["first_frame", "hybrid", "video_reference"],
+      "variants": [
+        { "id": "stain_reveal_cleanup", "trigger": "disgust_trigger", "modality": "visual_first", "narrative_function": "incident_trigger", "example_structure": "0-1s reveal a stain; 1-3s product acts; 3-5s show clean contrast.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "texture_macro_relief", "trigger": "texture_macro", "modality": "visual_first", "narrative_function": "transformation_setup", "example_structure": "0-1s macro discomfort; 1-3s treatment or use; 3-5s smooth result.", "reference_needs": ["first_frame_reference", "style_reference"] },
+        { "id": "odor_problem_fix", "trigger": "odor_problem", "modality": "face_first", "narrative_function": "embarrassment_moment", "example_structure": "0-1s reaction to odor; 1-3s product intervention; 3-5s comfortable social state.", "reference_needs": ["scene_reference", "product_reference"] },
+        { "id": "pet_mess_resolution", "trigger": "pet_disaster", "modality": "motion_first", "narrative_function": "incident_trigger", "example_structure": "0-1s pet mess appears; 1-3s product cleans or contains it; 3-5s home returns to order.", "reference_needs": ["video_motion_reference", "scene_reference"] },
+        { "id": "before_after_satisfaction", "trigger": "before_after", "modality": "visual_first", "narrative_function": "transformation_setup", "example_structure": "0-1s dirty before; 1-3s action bridge; 3-5s clear after proof.", "reference_needs": ["first_frame_reference", "product_reference"] }
+      ],
+      "negative_boundary": "Avoid disgust cues that overpower the product payoff or make the product category feel unsafe."
+    },
+    {
+      "id": "embarrassment_to_confidence",
+      "display_name": "尴尬到自信",
+      "definition": "Open with social exposure, appearance failure, or self-conscious pressure, then resolve into regained confidence or social readiness.",
+      "commerce_role": "Best for beauty, womenswear, personal care, education, and social-performance products.",
+      "common_categories": ["beauty", "womenswear", "personal_care", "education", "ai_tools"],
+      "arousal_profile": { "start": "embarrassment", "turn": "repair_or_reframe", "end": "confidence", "intensity_range": ["S0", "S1", "S2"] },
+      "product_bridge_logic": "The product should repair, prepare, or reframe the social moment quickly, without shaming the viewer.",
+      "preferred_generation_modes": ["first_frame", "hybrid"],
+      "variants": [
+        { "id": "public_appearance_fix", "trigger": "beauty_embarrassment", "modality": "face_first", "narrative_function": "embarrassment_moment", "example_structure": "0-1s social exposure; 1-3s product repair; 3-5s confident return.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "outfit_emergency_reframe", "trigger": "outfit_emergency", "modality": "visual_first", "narrative_function": "incident_trigger", "example_structure": "0-1s outfit issue; 1-3s styling/product fix; 3-5s composed look.", "reference_needs": ["first_frame_reference", "style_reference"] },
+        { "id": "testimonial_confidence", "trigger": "testimonial_line", "modality": "face_first", "narrative_function": "rescue_setup", "example_structure": "0-1s person names insecurity; 1-3s product use; 3-5s confident proof line.", "reference_needs": ["scene_reference", "product_reference"] },
+        { "id": "social_gaze_reversal", "trigger": "social_gaze", "modality": "face_first", "narrative_function": "social_conflict", "example_structure": "0-1s gaze creates pressure; 1-3s product changes the state; 3-5s gaze becomes approval.", "reference_needs": ["video_motion_reference", "first_frame_reference"] },
+        { "id": "mistake_to_mastery", "trigger": "mistake_reminder", "modality": "text_first", "narrative_function": "transformation_setup", "example_structure": "0-1s common error; 1-3s tool or method correction; 3-5s user appears capable.", "reference_needs": ["scene_reference", "first_frame_reference"] }
+      ],
+      "negative_boundary": "Do not make humiliation the memorable element; the confidence turn must dominate by second 5."
+    },
+    {
+      "id": "chaos_to_order",
+      "display_name": "混乱到秩序",
+      "definition": "Start with clutter, overload, mess, scattered tasks, or sensory chaos, then create a clear order state through product use.",
+      "commerce_role": "Best for storage, cleaning, AI tools, education, kitchen tools, and home organization.",
+      "common_categories": ["storage_home", "cleaning", "ai_tools", "education", "kitchen_tools"],
+      "arousal_profile": { "start": "chaos", "turn": "sorting_or_structure", "end": "order", "intensity_range": ["S0", "S1", "S2"] },
+      "product_bridge_logic": "The product must be the organizing principle, not just something placed into an already organized scene.",
+      "preferred_generation_modes": ["first_frame", "hybrid", "video_reference"],
+      "variants": [
+        { "id": "room_chaos_restore", "trigger": "room_chaos", "modality": "visual_first", "narrative_function": "incident_trigger", "example_structure": "0-1s messy room; 1-3s organizing action; 3-5s ordered space.", "reference_needs": ["first_frame_reference", "scene_reference"] },
+        { "id": "task_overload_sorting", "trigger": "work_deadline_shock", "modality": "text_first", "narrative_function": "crisis_escalation", "example_structure": "0-1s overloaded task list; 1-3s tool groups work; 3-5s clear output.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "family_mess_recovery", "trigger": "child_mess_incident", "modality": "motion_first", "narrative_function": "incident_trigger", "example_structure": "0-1s family mess; 1-3s product action; 3-5s calmer home state.", "reference_needs": ["video_motion_reference", "scene_reference"] },
+        { "id": "countertop_reset", "trigger": "before_after", "modality": "visual_first", "narrative_function": "transformation_setup", "example_structure": "0-1s cluttered surface; 1-3s product creates zones; 3-5s neat result.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "mental_clutter_to_plan", "trigger": "counterintuitive_claim", "modality": "text_first", "narrative_function": "rescue_setup", "example_structure": "0-1s confusing claim; 1-3s method/tool organizes it; 3-5s viewer sees a simple plan.", "reference_needs": ["first_frame_reference", "style_reference"] }
+      ],
+      "negative_boundary": "Avoid generic tidy-room imagery without a visible organizing mechanism."
+    },
+    {
+      "id": "curiosity_to_reveal",
+      "display_name": "好奇到揭示",
+      "definition": "Create an information gap through an unfinished action, hidden cause, strange result, or counterintuitive claim, then reveal the product-relevant answer.",
+      "commerce_role": "Best for AI tools, education, beauty, food, product demos, and any offer with a surprising mechanism.",
+      "common_categories": ["ai_tools", "education", "beauty", "food_beverage", "kitchen_tools"],
+      "arousal_profile": { "start": "curiosity", "turn": "reveal", "end": "understanding", "intensity_range": ["S1", "S2", "S3"] },
+      "product_bridge_logic": "The reveal must answer the curiosity gap with product value rather than only novelty.",
+      "preferred_generation_modes": ["video_reference", "hybrid", "first_frame"],
+      "variants": [
+        { "id": "unfinished_action_payoff", "trigger": "unfinished_action", "modality": "motion_first", "narrative_function": "rescue_setup", "example_structure": "0-1s action stops before answer; 1-3s product explains or completes it; 3-5s result appears.", "reference_needs": ["video_motion_reference", "product_reference"] },
+        { "id": "mystery_result_explained", "trigger": "mystery_result", "modality": "visual_first", "narrative_function": "transformation_setup", "example_structure": "0-1s show odd result; 1-3s reveal product mechanism; 3-5s repeatable proof.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "counterintuitive_claim_proof", "trigger": "counterintuitive_claim", "modality": "text_first", "narrative_function": "incident_trigger", "example_structure": "0-1s surprising claim; 1-3s proof action; 3-5s viewer sees why.", "reference_needs": ["first_frame_reference", "scene_reference"] },
+        { "id": "hidden_cause_unmask", "trigger": "hidden_cause", "modality": "visual_first", "narrative_function": "crisis_escalation", "example_structure": "0-1s problem without cause; 1-3s reveal cause; 3-5s product resolves it.", "reference_needs": ["first_frame_reference", "video_motion_reference"] },
+        { "id": "before_reveal", "trigger": "before_reveal", "modality": "motion_first", "narrative_function": "transformation_setup", "example_structure": "0-1s conceal the key state; 1-3s reveal transition; 3-5s product value is clear.", "reference_needs": ["video_motion_reference", "style_reference"] }
+      ],
+      "negative_boundary": "Do not leave the gap unresolved or reveal something unrelated to product value."
+    },
+    {
+      "id": "conflict_to_resolution",
+      "display_name": "冲突到解决",
+      "definition": "Open with interpersonal, household, task, or expectation conflict, then show a product-relevant route to resolution.",
+      "commerce_role": "Best for home, mother-baby, services, education, AI tools, and products that mediate friction.",
+      "common_categories": ["storage_home", "mother_baby", "education", "ai_tools", "cleaning"],
+      "arousal_profile": { "start": "conflict", "turn": "intervention", "end": "resolution", "intensity_range": ["S1", "S2", "S3"] },
+      "product_bridge_logic": "The conflict must be a product-relevant friction, not drama used as a pure attention decoy.",
+      "preferred_generation_modes": ["video_reference", "hybrid"],
+      "variants": [
+        { "id": "partner_conflict_reset", "trigger": "partner_conflict", "modality": "face_first", "narrative_function": "social_conflict", "example_structure": "0-1s conflict signal; 1-3s product reframes the task; 3-5s shared resolution.", "reference_needs": ["scene_reference", "video_motion_reference"] },
+        { "id": "parent_child_conflict_resolution", "trigger": "parent_child_conflict", "modality": "motion_first", "narrative_function": "social_conflict", "example_structure": "0-1s parent-child friction; 1-3s product makes the action easier; 3-5s calmer interaction.", "reference_needs": ["video_motion_reference", "scene_reference"] },
+        { "id": "boss_interrupt_solution", "trigger": "boss_interrupt", "modality": "text_first", "narrative_function": "incident_trigger", "example_structure": "0-1s sudden request; 1-3s tool creates answer; 3-5s task conflict resolves.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "social_visit_crisis", "trigger": "social_visit_crisis", "modality": "visual_first", "narrative_function": "crisis_escalation", "example_structure": "0-1s visitor pressure; 1-3s product fixes visible issue; 3-5s social moment recovers.", "reference_needs": ["scene_reference", "product_reference"] },
+        { "id": "comment_challenge_answer", "trigger": "comment_overlay", "modality": "text_first", "narrative_function": "social_conflict", "example_structure": "0-1s skeptical comment; 1-3s product proof; 3-5s comment is answered.", "reference_needs": ["first_frame_reference", "proof_reference"] }
+      ],
+      "negative_boundary": "Avoid conflict that cannot resolve within 3-5 seconds or that distracts from product proof."
+    },
+    {
+      "id": "desire_to_projection",
+      "display_name": "欲望到投射",
+      "definition": "Open with an aspirational identity, lifestyle, taste, or desired self-image, then let the viewer project themselves into the result.",
+      "commerce_role": "Best for womenswear, beauty, food, sports fitness, personal care, and lifestyle products.",
+      "common_categories": ["womenswear", "beauty", "food_beverage", "sports_fitness", "personal_care"],
+      "arousal_profile": { "start": "desire", "turn": "identity_projection", "end": "self_projection", "intensity_range": ["S0", "S1", "S2"] },
+      "product_bridge_logic": "The product must become the attainable bridge to the projected identity or lifestyle state.",
+      "preferred_generation_modes": ["first_frame", "hybrid"],
+      "variants": [
+        { "id": "identity_callout_projection", "trigger": "identity_callout", "modality": "text_first", "narrative_function": "transformation_setup", "example_structure": "0-1s name the desired identity; 1-3s product shows the route; 3-5s viewer sees themselves in it.", "reference_needs": ["first_frame_reference", "style_reference"] },
+        { "id": "outfit_projection", "trigger": "outfit_emergency", "modality": "visual_first", "narrative_function": "rescue_setup", "example_structure": "0-1s show desired occasion; 1-3s outfit/product completes it; 3-5s confident scene.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "first_bite_desire", "trigger": "first_bite", "modality": "face_first", "narrative_function": "transformation_setup", "example_structure": "0-1s sensory desire; 1-3s product experience; 3-5s satisfying reaction.", "reference_needs": ["video_motion_reference", "scene_reference"] },
+        { "id": "era_style_belonging", "trigger": "era_style", "modality": "symbol_first", "narrative_function": "transformation_setup", "example_structure": "0-1s recognizable style world; 1-3s product joins it; 3-5s viewer imagines belonging.", "reference_needs": ["style_reference", "first_frame_reference"] },
+        { "id": "body_goal_projection", "trigger": "body_challenge", "modality": "motion_first", "narrative_function": "transformation_setup", "example_structure": "0-1s desired movement or body state; 1-3s product support; 3-5s attainable result.", "reference_needs": ["video_motion_reference", "product_reference"] }
+      ],
+      "negative_boundary": "Avoid pure fantasy that never shows how the product makes the projected state attainable."
+    },
+    {
+      "id": "shock_to_proof",
+      "display_name": "震惊到证明",
+      "definition": "Open with a surprising result, extreme contrast, impossible-looking moment, or strong claim, then immediately prove how it connects to the product.",
+      "commerce_role": "Best for proof-heavy products, cleaning, beauty, kitchen tools, AI tools, and outcome-oriented demos.",
+      "common_categories": ["cleaning", "beauty", "kitchen_tools", "ai_tools", "food_beverage"],
+      "arousal_profile": { "start": "shock", "turn": "proof", "end": "belief", "intensity_range": ["S1", "S2", "S3"] },
+      "product_bridge_logic": "The shock cue must be followed by concrete proof, not only a claim or exaggerated reaction.",
+      "preferred_generation_modes": ["first_frame", "video_reference", "hybrid"],
+      "variants": [
+        { "id": "visual_contrast_proof", "trigger": "visual_contrast", "modality": "visual_first", "narrative_function": "transformation_setup", "example_structure": "0-1s shocking contrast; 1-3s product action; 3-5s repeatable proof.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "result_compression_proof", "trigger": "result_compression", "modality": "motion_first", "narrative_function": "transformation_setup", "example_structure": "0-1s compressed outcome; 1-3s show mechanism; 3-5s final result confirms it.", "reference_needs": ["video_motion_reference", "product_reference"] },
+        { "id": "proof_closeup", "trigger": "proof_closeup", "modality": "visual_first", "narrative_function": "rescue_setup", "example_structure": "0-1s close proof detail; 1-3s product context; 3-5s full scene verifies.", "reference_needs": ["first_frame_reference", "product_reference"] },
+        { "id": "sound_hit_claim", "trigger": "sound_hit", "modality": "audio_first", "narrative_function": "incident_trigger", "example_structure": "0-1s audio or rhythm shock; 1-3s product proof starts; 3-5s proof becomes visible.", "reference_needs": ["video_motion_reference", "audio_reference"] },
+        { "id": "social_proof_shock", "trigger": "social_proof", "modality": "text_first", "narrative_function": "social_conflict", "example_structure": "0-1s surprising social proof; 1-3s product reason; 3-5s concrete result or evidence.", "reference_needs": ["first_frame_reference", "proof_reference"] }
+      ],
+      "negative_boundary": "Avoid shock claims that the generated clip cannot substantiate visually."
+    }
+  ]
+}
