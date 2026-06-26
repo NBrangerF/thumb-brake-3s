@@ -10,11 +10,11 @@ The goal is to make the repository homepage feel like a product page without hid
 |---|---|---:|---|
 | English banner | `public/readme/banner-en.png` | 2172×724 | Main banner for English and Spanish README pages |
 | Chinese banner | `public/readme/banner-zh.png` | 2172×724 | Main banner for Chinese README page |
-| Hero screenshot | `public/readme/hero.png` | 1536×1024 or 1600×1000 | First visual in README |
+| Hero screenshot | `public/readme/hero.png` | 1464×1123 or similar desktop capture | First visual in README |
 | Demo video | `public/readme/demo.mp4` | 30–60s, under 25 MB if possible | Walkthrough link |
 | Video poster | `public/readme/demo-poster.png` | same ratio as video | Clickable preview if needed |
 | Video cases | `public/readme/videos/case-01.mp4` through `case-06.mp4` | 4–8s each, under 5 MB each if possible | Public creative examples in README |
-| Video case posters | `public/readme/video-posters/*.png` | same ratio as the source clip | Clickable README previews |
+| Video case posters | `public/readme/video-posters/*.png` | same ratio as the source clip | Poster frames for inline README videos |
 | Example hook cards | `public/readme/example-hooks.png` | 1400×900 | Shows output quality |
 | API example image | `public/readme/api-example.png` | optional | Useful for developers |
 
@@ -68,6 +68,20 @@ Keep these clips public-safe:
 - no exact competitor ad copy
 - no creator usernames or private transcripts
 - no copyrighted character or brand assets unless licensed
+
+The README files render these clips with inline HTML `<video>` tags plus an `Open MP4` fallback link. Use raw GitHub URLs for the `<video>` `src` and `poster` values so GitHub receives the actual MP4/PNG bytes instead of an HTML blob page:
+
+```html
+<video
+  src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4"
+  poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png"
+  controls
+  muted
+  playsinline
+  preload="metadata"
+  width="100%"
+></video>
+```
 
 ## README placement
 

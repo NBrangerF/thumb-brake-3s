@@ -14,6 +14,7 @@
   <p>
     <a href="https://thumb-brake-3s.vercel.app"><strong>Live Demo</strong></a> ·
     <a href="#video-cases">Video Cases</a> ·
+    <a href="#ai-usage-guide">AI Usage</a> ·
     <a href="#how-we-think-about-hooks">Hook Theory</a> ·
     <a href="#quick-start">Quick Start</a> ·
     <a href="#api">API</a> ·
@@ -70,15 +71,102 @@ The current release is **script and prompt generation only**. It does **not** su
 
 These short examples show the kinds of first-second stop signals, scene evidence, and product-bridge moments the system is designed to plan.
 
-| Urban interruption | Interface curiosity | Product-as-hero motion |
-|---|---|---|
-| [![Two workers looking upward in an empty city street](./public/readme/video-posters/case-01.mp4.png)](./public/readme/videos/case-01.mp4) | [![Phone screen with a glowing crystal-like object](./public/readme/video-posters/case-02.mp4.png)](./public/readme/videos/case-02.mp4) | [![Robot vacuum floating over a city-like grid](./public/readme/video-posters/case-03.mp4.png)](./public/readme/videos/case-03.mp4) |
-
-| Self-relevance routine | Cultural action bridge | Close-up behavior proof |
-|---|---|---|
-| [![Woman looking at her skin in a bathroom mirror setting](./public/readme/video-posters/case-04.mp4.png)](./public/readme/videos/case-04.mp4) | [![Sneaker at the edge of a cliff above clouds](./public/readme/video-posters/case-05.mp4.png)](./public/readme/videos/case-05.mp4) | [![Close-up of brushing teeth at a bathroom sink](./public/readme/video-posters/case-06.mp4.png)](./public/readme/videos/case-06.mp4) |
+<table>
+  <tr>
+    <td width="33%">
+      <strong>Urban interruption</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-01.mp4">Open MP4</a>
+    </td>
+    <td width="33%">
+      <strong>Interface curiosity</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-02.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-02.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-02.mp4">Open MP4</a>
+    </td>
+    <td width="33%">
+      <strong>Product-as-hero motion</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-03.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-03.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-03.mp4">Open MP4</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <strong>Self-relevance routine</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-04.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-04.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-04.mp4">Open MP4</a>
+    </td>
+    <td width="33%">
+      <strong>Cultural action bridge</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-05.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-05.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-05.mp4">Open MP4</a>
+    </td>
+    <td width="33%">
+      <strong>Close-up behavior proof</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-06.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-06.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-06.mp4">Open MP4</a>
+    </td>
+  </tr>
+</table>
 
 Read the full case notes in [docs/video-cases.md](./docs/video-cases.md).
+
+---
+
+## AI Usage Guide
+
+Use this section when asking Codex, Cursor, Claude Code, or another coding agent to install, review, or deploy Thumb Brake 3s. The full standalone guide is also available in [AI_USAGE.md](./AI_USAGE.md).
+
+### Pasteable install prompt
+
+```text
+Please set up this Thumb Brake 3s repository locally.
+
+Requirements:
+- Use pnpm.
+- Do not print, inspect, or commit plaintext API keys.
+- Copy .env.example to .env.local only if .env.local does not exist.
+- Help me configure my own OpenAI-compatible LLM values in .env.local.
+- Run pnpm install, pnpm test, pnpm lint, pnpm typecheck, and pnpm build.
+- Start pnpm dev and tell me the local URL.
+- If LLM config is missing, explain that generation requires LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL.
+- Do not add fallback generation, auth, billing, database, upload signing, or video job submission.
+```
+
+### Pasteable deployment prompt
+
+```text
+Please deploy this Thumb Brake 3s Next.js app.
+
+Requirements:
+- Use a host that supports Next.js API routes, preferably Vercel.
+- Configure LLM_PROVIDER, LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL as server-side environment variables.
+- Never expose the API key with NEXT_PUBLIC_.
+- Run pnpm test, pnpm lint, pnpm typecheck, and pnpm build before deployment.
+- Verify the production deployment is Ready.
+- Do not print the API key.
+```
+
+### Pasteable project review prompt
+
+```text
+Please review this Thumb Brake 3s repository.
+
+Focus on:
+- Whether pnpm install && pnpm dev works locally.
+- Whether pnpm test, pnpm lint, pnpm typecheck, and pnpm build pass.
+- Whether README.md, README.zh-CN.md, README.es.md, DEPLOY.md, AI_USAGE.md, and docs/project-guide.md match the actual code.
+- Whether .env.local, real API keys, .DS_Store, node_modules, and .next are excluded.
+- Whether the app still requires an LLM and does not silently fallback without a key.
+- Whether no auth, billing, database, upload signing, or video job submission code was reintroduced.
+```
+
+### Agent safety checklist
+
+- Keep LLM keys server-side only; never use `NEXT_PUBLIC_` for secrets.
+- Do not print `.env.local`, shell history, or provider credentials.
+- Do not commit `.env.local`, `.env`, generated `.next`, `node_modules`, media test output, or `.DS_Store`.
+- If LLM config is missing, generation should fail clearly with `LLM_CONFIG_REQUIRED`.
+- Do not add a no-key fallback generator; Thumb Brake 3s intentionally requires an LLM.
 
 ---
 

@@ -14,6 +14,7 @@
   <p>
     <a href="https://thumb-brake-3s.vercel.app"><strong>在线体验</strong></a> ·
     <a href="#视频案例">视频案例</a> ·
+    <a href="#ai-使用指南">AI 使用指南</a> ·
     <a href="#我们如何理解-hook">Hook 理论</a> ·
     <a href="#快速开始">快速开始</a> ·
     <a href="#api">API</a> ·
@@ -62,15 +63,102 @@
 
 这些短片用于展示 Thumb Brake 3s 关注的第一秒停滑信号、场景证据和产品桥接方式。
 
-| 城市场景打断 | UI 好奇缺口 | 产品英雄运动 |
-|---|---|---|
-| [![两名工人在空旷城市街道向上看](./public/readme/video-posters/case-01.mp4.png)](./public/readme/videos/case-01.mp4) | [![手机屏幕上的发光水晶形物体](./public/readme/video-posters/case-02.mp4.png)](./public/readme/videos/case-02.mp4) | [![扫地机器人悬浮在城市网格上](./public/readme/video-posters/case-03.mp4.png)](./public/readme/videos/case-03.mp4) |
-
-| 自我相关日常 | 文化动作桥接 | 近景行为证明 |
-|---|---|---|
-| [![女生在浴室镜前观察皮肤状态](./public/readme/video-posters/case-04.mp4.png)](./public/readme/videos/case-04.mp4) | [![运动鞋停在云海边缘](./public/readme/video-posters/case-05.mp4.png)](./public/readme/videos/case-05.mp4) | [![浴室洗手台前刷牙近景](./public/readme/video-posters/case-06.mp4.png)](./public/readme/videos/case-06.mp4) |
+<table>
+  <tr>
+    <td width="33%">
+      <strong>城市场景打断</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-01.mp4">打开 MP4</a>
+    </td>
+    <td width="33%">
+      <strong>UI 好奇缺口</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-02.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-02.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-02.mp4">打开 MP4</a>
+    </td>
+    <td width="33%">
+      <strong>产品英雄运动</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-03.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-03.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-03.mp4">打开 MP4</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <strong>自我相关日常</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-04.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-04.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-04.mp4">打开 MP4</a>
+    </td>
+    <td width="33%">
+      <strong>文化动作桥接</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-05.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-05.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-05.mp4">打开 MP4</a>
+    </td>
+    <td width="33%">
+      <strong>近景行为证明</strong><br />
+      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-06.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-06.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
+      <br /><a href="./public/readme/videos/case-06.mp4">打开 MP4</a>
+    </td>
+  </tr>
+</table>
 
 完整案例说明见 [docs/video-cases.md](./docs/video-cases.md)。
+
+---
+
+## AI 使用指南
+
+当你让 Codex、Cursor、Claude Code 或其他代码 Agent 安装、审查、部署这个仓库时，可以直接使用下面的提示词。完整版本见 [AI_USAGE.md](./AI_USAGE.md)。
+
+### 安装提示词
+
+```text
+Please set up this Thumb Brake 3s repository locally.
+
+Requirements:
+- Use pnpm.
+- Do not print, inspect, or commit plaintext API keys.
+- Copy .env.example to .env.local only if .env.local does not exist.
+- Help me configure my own OpenAI-compatible LLM values in .env.local.
+- Run pnpm install, pnpm test, pnpm lint, pnpm typecheck, and pnpm build.
+- Start pnpm dev and tell me the local URL.
+- If LLM config is missing, explain that generation requires LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL.
+- Do not add fallback generation, auth, billing, database, upload signing, or video job submission.
+```
+
+### 部署提示词
+
+```text
+Please deploy this Thumb Brake 3s Next.js app.
+
+Requirements:
+- Use a host that supports Next.js API routes, preferably Vercel.
+- Configure LLM_PROVIDER, LLM_BASE_URL, LLM_API_KEY, and LLM_MODEL as server-side environment variables.
+- Never expose the API key with NEXT_PUBLIC_.
+- Run pnpm test, pnpm lint, pnpm typecheck, and pnpm build before deployment.
+- Verify the production deployment is Ready.
+- Do not print the API key.
+```
+
+### 项目审查提示词
+
+```text
+Please review this Thumb Brake 3s repository.
+
+Focus on:
+- Whether pnpm install && pnpm dev works locally.
+- Whether pnpm test, pnpm lint, pnpm typecheck, and pnpm build pass.
+- Whether README.md, README.zh-CN.md, README.es.md, DEPLOY.md, AI_USAGE.md, and docs/project-guide.md match the actual code.
+- Whether .env.local, real API keys, .DS_Store, node_modules, and .next are excluded.
+- Whether the app still requires an LLM and does not silently fallback without a key.
+- Whether no auth, billing, database, upload signing, or video job submission code was reintroduced.
+```
+
+### Agent 安全清单
+
+- LLM key 只能放在服务端环境变量中，不要使用 `NEXT_PUBLIC_` 暴露。
+- 不要打印 `.env.local`、shell history 或供应商密钥。
+- 不要提交 `.env.local`、`.env`、生成后的 `.next`、`node_modules`、测试媒体输出或 `.DS_Store`。
+- 缺少 LLM 配置时，生成接口应明确返回 `LLM_CONFIG_REQUIRED`。
+- 不要加入无 key fallback；Thumb Brake 3s 故意要求配置 LLM。
 
 ---
 
