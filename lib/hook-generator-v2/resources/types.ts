@@ -32,6 +32,9 @@ export type AudienceSituationPattern = {
   commonScenes: string[]
   compatibleIntentTypes: HookOneShotIntent[]
   compatibleCategories: string[]
+  applicableProductCategories?: string[]
+  weakFitCategories?: string[]
+  avoidForCategories?: string[]
   compatibleHookTypes: string[]
   compatibleEventKinds: string[]
   exampleAudienceInputs: string[]
@@ -144,7 +147,7 @@ export type FailureMode = {
 
 export type GoldHookExample = {
   id: string
-  source: "hook_reference_asset" | "hook_trend_observation" | "p0_seed"
+  source: "hook_reference_asset" | "hook_trend_observation" | "hook_generation_few_shot" | "p0_seed"
   summary: string
   hookType?: string
   category?: string | null

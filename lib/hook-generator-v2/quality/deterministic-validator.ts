@@ -27,6 +27,7 @@ export function validateHookScriptAsset(input: {
   issues.push(...validateProductBridge(parsed, input.scriptCreativeSpec))
   issues.push(...validateCultureFusion(parsed, input.resourceBundle))
   issues.push(...validateUserIntentExpansionGrounding(parsed, input.scriptCreativeSpec))
+  issues.push(...validateAudienceSceneCallout(parsed, input.scriptCreativeSpec, input.resourceBundle))
 
   return {
     status: issues.some((issue) => issue.severity === "error") ? "fail" : "pass",
@@ -256,6 +257,135 @@ function validateUserIntentExpansionGrounding(
     severity: "warning",
     fieldPath: "intentContract.userIntentExpansion",
   }]
+}
+
+function validateAudienceSceneCallout(
+  scriptAsset: HookScriptAsset,
+  scriptCreativeSpec: ScriptCreativeSpec,
+  resourceBundle: HookCreativeResourceBundle,
+): HookValidationIssue[] {
+  if (!isAudienceSceneCalloutSpec(scriptCreativeSpec)) return []
+
+  const issues: HookValidationIssue[] = []
+  const earlyShots = scriptAsset.timelineShots.slice(0, 2)
+  const earlyRawText = [
+    scriptAsset.hookSummary,
+    scriptAsset.audienceStopReason,
+    scriptAsset.firstFrameIntent.stopSignal,
+    ...scriptAsset.textOverlay,
+    scriptAsset.tensionPlan?.firstSecondShock ?? "",
+    scriptAsset.tensionPlan?.escalationBeat ?? "",
+    ...earlyShots.flatMap((shot) => [
+      shot.scene,
+      shot.subject,
+      shot.action,
+      shot.dialogue ?? "",
+      shot.textOverlay ?? "",
+      ...shot.mustShow,
+    ]),
+  ].join(" ")
+  const earlyText = signalFingerprint(earlyRawText)
+  const matchedSignals = audienceRecognitionSignals(resourceBundle)
+    .filter((signal) => textContainsSignal(earlyText, signalFingerprint(signal)))
+
+  if (hasGenericAudienceLabelOnly(earlyRawText) && matchedSignals.length < 2) {
+    issues.push({
+      code: "GENERIC_AUDIENCE_LABEL",
+      message: "Audience-scene callout cannot stop at generic labels like 给女生/给年轻人/宝妈必买.",
+      severity: "error",
+      fieldPath: "timelineShots.0",
+    })
+  }
+
+  if (matchedSignals.length < 2) {
+    issues.push({
+      code: "AUDIENCE_LABEL_WITHOUT_SCENE",
+      message: "Audience-scene callout must show at least two visual recognition signals in the first 3 seconds.",
+      severity: "error",
+      fieldPath: "timelineShots",
+    })
+  }
+
+  if (hasSensitiveAudienceClaim(earlyRawText)) {
+    issues.push({
+      code: "SENSITIVE_AUDIENCE_CLAIM",
+      message: "Audience-scene callout must avoid shame, medicalized, or body-anxiety claims.",
+      severity: "error",
+      fieldPath: "textOverlay",
+    })
+  }
+
+  if (!hasAudienceSceneBridge(scriptAsset, scriptCreativeSpec, resourceBundle)) {
+    issues.push({
+      code: "AUDIENCE_CALLOUT_NO_BRIDGE",
+      message: "Audience-scene callout must bridge the identified moment to a product role, result, or next action.",
+      severity: "error",
+      fieldPath: "productRole",
+    })
+  }
+
+  return issues
+}
+
+function isAudienceSceneCalloutSpec(scriptCreativeSpec: ScriptCreativeSpec) {
+  return scriptCreativeSpec.intentContract.intentType === "audience_first" &&
+    ["H4_C_AUDIENCE_SCENE_CALLOUT", "H4_V1_AUDIENCE_SCENE_CALLOUT"].includes(scriptCreativeSpec.resourceIds.attentionMicroPatternId)
+}
+
+function audienceRecognitionSignals(resourceBundle: HookCreativeResourceBundle) {
+  return [...new Set(resourceBundle.audienceSituations.flatMap((situation) => [
+    situation.name,
+    ...situation.recognitionSignals,
+    ...situation.commonScenes,
+    ...situation.exampleAudienceInputs,
+  ]).map((value) => value.trim()).filter((value) => value.length >= 2))]
+}
+
+function textContainsSignal(text: string, signal: string) {
+  if (!text || !signal) return false
+  if (text.includes(signal) || signal.includes(text)) return true
+  for (let index = 0; index < signal.length - 1; index += 1) {
+    const gram = signal.slice(index, index + 2)
+    if (!["的人", "一个", "场景", "日常", "用户"].includes(gram) && text.includes(gram)) return true
+  }
+  return false
+}
+
+function hasGenericAudienceLabelOnly(value: string) {
+  return /给?(女生|男生|年轻人|上班族|宝妈|妈妈|用户|大家)(都该用|必买|必备|的好物|推荐)?/.test(value)
+}
+
+function hasSensitiveAudienceClaim(value: string) {
+  return /产后.{0,8}(恢复身材|瘦|减肥|焦虑)|30\+.{0,8}(显老|衰老|必买)|治疗|治愈|疼痛消失|医美级|逆龄/.test(value)
+}
+
+function hasAudienceSceneBridge(
+  scriptAsset: HookScriptAsset,
+  scriptCreativeSpec: ScriptCreativeSpec,
+  resourceBundle: HookCreativeResourceBundle,
+) {
+  const productName = signalFingerprint(scriptCreativeSpec.productLock.productName)
+  const bridgeTerms = [
+    productName,
+    ...resourceBundle.bridgeCandidates.map((bridge) => signalFingerprint(bridge.name)),
+    "下一步",
+    "承接",
+    "结果",
+    "线索",
+    "解决",
+    "继续",
+  ].filter(Boolean)
+  const bridgeText = signalFingerprint([
+    scriptAsset.productRole.entryTime,
+    scriptAsset.productRole.entryAction,
+    scriptAsset.productRole.whyItBelongs,
+    scriptAsset.tensionPlan?.productResolutionRole ?? "",
+    ...scriptAsset.timelineShots
+      .filter((shot) => shot.retentionPurpose === "product_bridge" || shot.retentionPurpose === "proof_hint")
+      .flatMap((shot) => [shot.scene, shot.subject, shot.action, shot.textOverlay ?? "", ...shot.mustShow]),
+  ].join(" "))
+
+  return bridgeTerms.some((term) => term && bridgeText.includes(term))
 }
 
 function safeArray<T>(value: T[] | undefined | null) {

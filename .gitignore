@@ -9,3 +9,6 @@ coverage
 .env.server
 .env.server.*
 *.tsbuildinfo
+.vercel
+.env*
+!.env.example

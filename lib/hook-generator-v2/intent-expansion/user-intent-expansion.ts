@@ -84,6 +84,7 @@ export function buildUserIntentExpansionPrompt(input: {
         "For each concept, keep sourceSpan from the original user text and explain relationToEvent.",
         "observableEvidence must be visible or audible in a phone-shot video.",
         "hookSignals must help the next script stage place the expansion into opening action, conflict source, pain evidence, social pressure, or open loop.",
+        "For audience_first, separate the specific audience label from scene evidence; generic labels like 女生/年轻人/宝妈 need concrete scene evidence or a situation-based downgrade.",
         "productExposurePolicy.requiredInHook can be false. If pain evidence followed by direct sales product reveal risks negative attribution, recommend deferred product timing.",
       ],
       requiredOutputShape: {

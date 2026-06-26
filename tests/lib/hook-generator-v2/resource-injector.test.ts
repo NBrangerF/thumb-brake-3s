@@ -194,6 +194,7 @@ describe("hook generator v2 resource injector", () => {
       expect(bundle.failureWarnings.length).toBeLessThanOrEqual(3)
       expect(bundle.examples.length).toBeGreaterThanOrEqual(1)
       expect(bundle.examples.length).toBeLessThanOrEqual(2)
+      expect(bundle.examples[0].source).toBe("hook_generation_few_shot")
       expect(bundle.resourceIds.attentionMicroPatternId).toBe(bundle.attentionMicroPattern.id)
       expect(bundle.resourceIds.eventPrimitiveIds).toEqual(bundle.eventCandidates.map((item) => item.id))
       expect(bundle.resourceIds.productBridgeRoleIds).toEqual(bundle.bridgeCandidates.map((item) => item.id))

@@ -1,16 +1,14 @@
 {
-  "version": "v0",
-  "generated_at": "2026-05-13",
+  "version": "v1-2026-balanced",
+  "generated_at": "2026-06-26",
   "resources": [
-    "resources/hook_taxonomy.md",
-    "resources/hook_criteria_library.md",
     "resources/hook_mood_library.json",
-    "prompt-playbooks/first_frame_ugc_prompt_playbook.md",
     "resources/reference_tag_dictionary.json",
     "resources/pattern_cards/v0_pattern_cards.jsonl",
+    "resources/pattern_cards/v1_2026_pattern_expansion.balanced.jsonl",
     "resources/pattern_cards/product_independent_pattern_cards.jsonl",
+    "resources/few_shots/hook-generation-few-shots.v1-balanced.json",
     "resources/trend_observations/v0_trend_observations.jsonl",
-    "culture_sources.jsonl",
     "culture_symbol_entries.jsonl",
     "culture_hook_templates.jsonl"
   ],
@@ -29,15 +27,25 @@
     "sports_fitness"
   ],
   "coverage_targets": {
-    "pattern_cards": 125,
+    "pattern_cards": 331,
     "hook_type_counts": {
-      "H1": 15,
-      "H2": 25,
-      "H3": 15,
-      "H4": 20,
-      "H5": 20,
-      "H6": 15,
-      "H7": 15
+      "H1": 46,
+      "H2": 55,
+      "H3": 45,
+      "H4": 48,
+      "H5": 50,
+      "H6": 44,
+      "H7": 43
+    },
+    "few_shots": 42,
+    "few_shot_counts": {
+      "H1": 6,
+      "H2": 6,
+      "H3": 6,
+      "H4": 6,
+      "H5": 6,
+      "H6": 6,
+      "H7": 6
     },
     "category_playbooks": 12,
     "reference_assets": 120,

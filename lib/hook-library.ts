@@ -100,6 +100,24 @@ export type HookTrendObservation = {
   approvedAt?: string | null
 }
 
+export type HookGenerationFewShot = {
+  id: string
+  hookType: string
+  intentMode: string
+  category: string
+  productInput: string
+  audienceInput: string
+  patternRefs: string[]
+  badExampleToAvoid: string
+  expectedHookCard: {
+    hookTitle: string
+    first3Seconds: Record<string, string>
+    shortScript: string
+    visualEvidence: string[]
+    safeGuardrailNote: string
+  }
+}
+
 export type HookLibraryCoverage = {
   patternCards: number
   productRelatedPatternCards: number
@@ -334,6 +352,8 @@ export type HookRecommendationCard = {
   categoryId?: string | null
   categoryLabel?: string | null
   moodLabel?: string | null
+  patternName?: string
+  audienceFit?: string[]
   scopeLabel?: string
   captureLabel?: string
   recoveryRuleLabel?: string
@@ -419,6 +439,7 @@ export const HOOK_SUBTYPE_LABELS: Record<string, string> = {
   counterintuitive_claim: "反常识声明",
   crowd_reaction: "群体反应",
   daily_scene: "日常场景",
+  audience_scene_callout: "场景化人群点名",
   danger_threshold: "危险临界点",
   direct_gaze: "直视镜头",
   disgust_trigger: "厌恶触发",
@@ -427,7 +448,95 @@ export const HOOK_SUBTYPE_LABELS: Record<string, string> = {
   gaze_cue: "视线引导",
   genre_cold_open: "类型片开场",
   hidden_cause: "隐藏原因",
+  color_collision: "色彩错位",
+  sensory_macro_asymmetry: "微距感官反差",
+  asmr_interrupt: "ASMR 打断",
+  sound_cut: "突然静音",
+  texture_proof: "质地证明",
+  smell_cue_reaction: "气味反应",
+  object_scale_surprise: "尺度惊讶",
+  micro_motion_loop: "微动作循环",
+  haptic_pop: "触感爆点",
+  visual_static_break: "静帧打断",
+  material_edge_reveal: "材质边界揭示",
+  rhythm_cut: "节奏切断",
+  lens_interrupt: "镜头遮挡揭示",
+  scale_snap: "尺度瞬变",
+  micro_disaster: "微型灾难",
+  near_miss: "差点出事",
+  public_private_flip: "私事公开化",
+  routine_break: "流程中断",
+  social_time_pressure: "社交时间压力",
+  object_betrayal: "物件背叛",
+  awkward_pause: "尴尬停顿",
+  threshold_interruption: "临界打断",
+  room_goes_quiet: "全场安静",
+  wrong_item_panic: "拿错/带错惊慌",
+  resource_spillover: "资源溢出",
+  companion_reaction_escalation: "同伴反应升级",
+  interruption_callout: "打断式点名",
+  task_timer_trap: "任务计时陷阱",
+  receipt_mystery: "票据悬念",
+  comment_answer_gap: "评论答疑缺口",
+  hidden_cost_math: "隐藏成本计算",
+  test_reversal: "测试反转",
+  unfinished_sentence: "半句悬念",
+  result_first_gap: "结果先行缺口",
+  masked_reveal: "遮挡揭晓",
+  not_what_it_looks_like: "不是你想的那样",
+  proof_without_context: "无上下文证明",
+  two_choice_gap: "二选一缺口",
+  negative_space_question: "留白提问",
+  reverse_order_demo: "倒序演示",
+  hidden_ingredient_reveal: "隐藏成分/部件揭示",
+  future_pacing_gap: "近未来缺口",
   identity_callout: "身份点名",
+  demographic_callout: "人群点名",
+  situation_callout: "场景点名",
+  routine_mirror: "日常镜像",
+  role_pressure: "角色压力",
+  receipt_proof: "票据证明",
+  one_action_proof: "单动作证明",
+  process_trace: "过程痕迹",
+  side_by_side_truth: "并排真相",
+  macro_evidence: "微距证据",
+  stress_test_soft: "轻压力测试",
+  value_stack_visual: "价值摊开",
+  time_lapse_compression: "时间压缩",
+  checklist_proof: "清单证明",
+  use_case_stack: "使用场景堆叠",
+  durability_moment: "耐用性瞬间",
+  mini_before_after: "微型前后对比",
+  ui_state_change: "界面状态变化",
+  sensory_reaction_proof: "感官反应证明",
+  creator_reply: "创作者回复",
+  comment_challenge: "评论挑战",
+  peer_steal: "朋友抢先拿走",
+  live_room_energy: "直播间节奏",
+  skeptical_friend: "怀疑型朋友",
+  group_vote: "群体投票",
+  duet_reaction: "分屏反应",
+  social_receipt: "社交凭证",
+  roommate_reaction: "室友/同伴反应",
+  customer_objection_reply: "客户异议回复",
+  comment_section_standoff: "评论区对峙",
+  building_in_public: "公开构建",
+  family_table_test: "家庭餐桌测试",
+  crowd_waits_for_answer: "众人等待答案",
+  nostalgia_reset: "怀旧重启",
+  local_flavour: "本地风味",
+  surreal_silliness: "超现实好笑",
+  platform_native_bit: "平台原生段子",
+  game_quest_logic: "游戏任务逻辑",
+  office_core: "办公室语法",
+  photobooth_retro: "复古拍立得",
+  mini_docu_coldopen: "迷你纪录片冷开场",
+  reality_show_confessional: "真人秀告白",
+  micro_documentary: "微纪录片",
+  retro_interface_reset: "复古界面重启",
+  quest_ui_overlay: "任务 UI 叠层",
+  meme_format_remix: "梗格式改写",
+  aesthetic_subculture_code: "审美亚文化识别",
   loss_aversion: "损失规避",
   meme_structure: "梗结构",
   mistake_reminder: "错误提醒",
@@ -609,6 +718,7 @@ type HookLibraryData = {
   observations: HookTrendObservation[]
   cultureSymbols: CultureSymbolEntry[]
   cultureTemplates: CultureBorrowingTemplate[]
+  fewShots: HookGenerationFewShot[]
 }
 
 function readJson<T>(filePath: string): T {
@@ -636,12 +746,29 @@ function fileSignature(filePath: string) {
   return `${filePath}:${stat.mtimeMs}:${stat.size}`
 }
 
+function directoryFiles(dirPath: string, extension: string) {
+  try {
+    return readdirSync(dirPath)
+      .filter((fileName) => fileName.endsWith(extension))
+      .sort()
+      .map((fileName) => path.join(dirPath, fileName))
+  } catch {
+    return []
+  }
+}
+
+function directoryFileSignatures(dirPath: string, extension: string) {
+  return directoryFiles(dirPath, extension).map(fileSignature)
+}
+
 function currentLibrarySignature() {
   const patternRoot = path.join(RESOURCE_ROOT, "pattern_cards")
   const categoryRoot = path.join(RESOURCE_ROOT, "category_playbooks")
+  const fewShotRoot = path.join(RESOURCE_ROOT, "few_shots")
   return [
     ...readdirSync(patternRoot).filter((fileName) => fileName.endsWith(".jsonl")).sort().map((fileName) => fileSignature(path.join(patternRoot, fileName))),
     ...readdirSync(categoryRoot).filter((fileName) => fileName.endsWith(".json")).sort().map((fileName) => fileSignature(path.join(categoryRoot, fileName))),
+    ...directoryFileSignatures(fewShotRoot, ".json"),
     fileSignature(path.join(RESOURCE_ROOT, "reference_tag_dictionary.json")),
     fileSignature(path.join(RESOURCE_ROOT, "trend_observations", "v0_trend_observations.jsonl")),
     fileSignature(path.join(DATA_ROOT, "culture_symbol_entries.jsonl")),
@@ -1012,6 +1139,8 @@ function patternToRecommendationCard(
     categoryId,
     categoryLabel,
     moodLabel,
+    patternName: row.patternName,
+    audienceFit: parseJsonArray(row.audienceFitJson).map(String),
     scopeLabel,
     captureLabel,
     recoveryRuleLabel: productFreedomLabel,
@@ -1058,8 +1187,13 @@ function loadLibrary(): HookLibraryData {
   const observations = readJsonLines(path.join(RESOURCE_ROOT, "trend_observations", "v0_trend_observations.jsonl")).map(normalizeObservation)
   const cultureSymbols = readJsonLines(path.join(DATA_ROOT, "culture_symbol_entries.jsonl")).map(normalizeCultureSymbol)
   const cultureTemplates = readJsonLines(path.join(DATA_ROOT, "culture_hook_templates.jsonl")).map(normalizeCultureTemplate)
+  const fewShotRoot = path.join(RESOURCE_ROOT, "few_shots")
+  const fewShots = directoryFiles(fewShotRoot, ".json").flatMap((filePath) => {
+    const payload = readJson<{ fewShots?: HookGenerationFewShot[] }>(filePath)
+    return payload.fewShots ?? []
+  })
 
-  cachedLibrary = { patterns, playbooks, references, observations, cultureSymbols, cultureTemplates }
+  cachedLibrary = { patterns, playbooks, references, observations, cultureSymbols, cultureTemplates, fewShots }
   cachedLibrarySignature = signature
   return cachedLibrary
 }
@@ -1508,6 +1642,18 @@ export function listHookTrendObservations(params: HookLibraryListParams = {}) {
       matches(row.status, params.status) &&
       matches(row.observedCategory, params.category) &&
       includesJsonArray(row.detectedHookTypeJson, params.hookType)
+    )
+  })
+  return paginate(rows, params)
+}
+
+export function listHookGenerationFewShots(params: HookLibraryListParams = {}) {
+  const normalizedCategory = normalizeHookCategoryId(params.category)
+  const rows = loadLibrary().fewShots.filter((row) => {
+    return (
+      matches(row.hookType, params.hookType) &&
+      matches(row.intentMode, params.intentMode) &&
+      (!params.category || row.category === (normalizedCategory || String(params.category)))
     )
   })
   return paginate(rows, params)

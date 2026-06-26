@@ -97,6 +97,14 @@ export function repairHookScriptAsset(input: {
   if (issueCodes.has("NON_FILMABLE_ACTION") || issueCodes.has("SCRIPT_ASSET_SCHEMA_INVALID")) {
     repaired = repairFilmableActions(repaired, input.scriptCreativeSpec)
   }
+  if (
+    issueCodes.has("GENERIC_AUDIENCE_LABEL") ||
+    issueCodes.has("AUDIENCE_LABEL_WITHOUT_SCENE") ||
+    issueCodes.has("SENSITIVE_AUDIENCE_CLAIM") ||
+    issueCodes.has("AUDIENCE_CALLOUT_NO_BRIDGE")
+  ) {
+    repaired = repairAudienceSceneCallout(repaired, input.scriptCreativeSpec, input.resourceBundle)
+  }
 
   return {
     repaired: true,
@@ -207,6 +215,78 @@ function repairFilmableActions(
   }
 }
 
+function repairAudienceSceneCallout(
+  asset: HookScriptAsset,
+  spec: ScriptCreativeSpec,
+  bundle: HookCreativeResourceBundle,
+) {
+  const situation = bundle.audienceSituations[0]
+  const audienceLabel = situation?.exampleAudienceInputs[0] ?? spec.intentContract.userIntentText
+  const scene = situation?.commonScenes[0] ?? bundle.productContract.typicalUseScenes[0] ?? "真实使用场景"
+  const signals = unique([
+    ...(situation?.recognitionSignals ?? []),
+    ...bundle.productContract.usageAnchors,
+  ]).slice(0, 5)
+  const firstSignal = signals.slice(0, 2).join("、") || "可见身份和场景线索"
+  const productName = spec.productLock.productName
+  const repairedShots = asset.timelineShots.length > 0 ? asset.timelineShots.map((shot, index) => {
+    if (index > 1) return sanitizeShot(shot)
+    return {
+      ...sanitizeShot(shot),
+      retentionPurpose: index === 0 ? "stop_scroll" as const : shot.retentionPurpose,
+      scene: index === 0 ? `${scene}，${firstSignal}同框` : shot.scene,
+      subject: index === 0 ? audienceLabel : shot.subject,
+      action: index === 0
+        ? `${audienceLabel}在${scene}停住，${firstSignal}让人一眼识别这是谁的时刻`
+        : shot.action,
+      textOverlay: index === 0 ? `${audienceLabel}` : shot.textOverlay,
+      productVisibility: index === 0 ? "background_hint" as const : shot.productVisibility,
+      mustShow: unique([...signals.slice(0, 4), ...shot.mustShow]).slice(0, 6),
+      transitionToNextShot: index === 0 ? "继续展示这个人群为什么需要下一步" : shot.transitionToNextShot,
+    }
+  }) : [{
+    time: "0-1s",
+    retentionPurpose: "stop_scroll" as const,
+    scene: `${scene}，${firstSignal}同框`,
+    subject: audienceLabel,
+    action: `${audienceLabel}在${scene}停住，${firstSignal}让人一眼识别这是谁的时刻`,
+    camera: "环境中近景",
+    sound: "真实环境声短暂停住",
+    textOverlay: audienceLabel,
+    productVisibility: "background_hint" as const,
+    mustShow: signals.slice(0, 4),
+    mustAvoid: spec.productLock.forbiddenConfusions,
+    transitionToNextShot: "继续展示这个人群为什么需要下一步",
+  }]
+
+  return {
+    ...asset,
+    hookSummary: sanitizeAudienceText(asset.hookSummary || `${audienceLabel}的场景化人群点名`),
+    audienceStopReason: `${audienceLabel}会先认出${scene}里的${firstSignal}，再看下一步怎么被接住。`,
+    productRole: {
+      ...asset.productRole,
+      entryAction: `${productName}作为这个场景的下一步线索进入，不硬切 packshot。`,
+      whyItBelongs: `${productName}承接${audienceLabel}在${scene}里的具体停顿，让动作继续或结果变清楚。`,
+      avoidHardSell: true,
+      noFullClaim: true,
+    },
+    timelineShots: repairedShots,
+    textOverlay: unique(asset.textOverlay.map(sanitizeAudienceText).concat(audienceLabel)).slice(0, 4),
+    firstFrameIntent: {
+      ...asset.firstFrameIntent,
+      stopSignal: sanitizeAudienceText(asset.firstFrameIntent.stopSignal || audienceLabel),
+      mustShow: unique([...signals.slice(0, 4), ...asset.firstFrameIntent.mustShow]).slice(0, 6),
+      mustAvoid: unique([...asset.firstFrameIntent.mustAvoid, ...spec.productLock.forbiddenConfusions]),
+    },
+    videoPromptHints: {
+      ...asset.videoPromptHints,
+      keyObjects: unique([...signals.slice(0, 4), ...asset.videoPromptHints.keyObjects, productName]).slice(0, 8),
+      avoid: unique([...asset.videoPromptHints.avoid, ...spec.productLock.forbiddenConfusions]),
+    },
+    riskFlags: unique([...asset.riskFlags, "audience_scene_repaired"]),
+  }
+}
+
 function ensureProductBridgeShot(
   shots: TimelineShot[],
   spec: ScriptCreativeSpec,
@@ -260,6 +340,26 @@ function isAbstractAction(action: string) {
   return ["展示痛点", "呈现痛点", "展示卖点", "呈现卖点", "呈现高级感", "展示高级感"].some((phrase) =>
     normalized.includes(phrase)
   )
+}
+
+function sanitizeShot(shot: TimelineShot): TimelineShot {
+  return {
+    ...shot,
+    scene: sanitizeAudienceText(shot.scene),
+    subject: sanitizeAudienceText(shot.subject),
+    action: sanitizeAudienceText(shot.action),
+    dialogue: shot.dialogue ? sanitizeAudienceText(shot.dialogue) : shot.dialogue,
+    textOverlay: shot.textOverlay ? sanitizeAudienceText(shot.textOverlay) : shot.textOverlay,
+    mustShow: shot.mustShow.map(sanitizeAudienceText),
+  }
+}
+
+function sanitizeAudienceText(value: string) {
+  return value
+    .replace(/产后妈妈.{0,8}(恢复身材|瘦|减肥|焦虑)/g, "产后妈妈出门前想找回舒适状态")
+    .replace(/30\+.{0,8}(显老|衰老|必买)/g, "30+ 出门前想让状态更利落")
+    .replace(/(女生|男生|年轻人|宝妈|妈妈|用户|大家)(都该用|必买|必备)/g, "$1的具体场景")
+    .replace(/治疗|治愈|疼痛消失|医美级|逆龄/g, "日常护理")
 }
 
 function unique(values: string[]) {

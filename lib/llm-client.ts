@@ -32,6 +32,13 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+function effectiveMaxTokens(input: CallLlmInput) {
+  const requested = input.maxTokens ?? 2000
+  const model = input.model ?? input.config.model
+  if (/^gpt-5\b/i.test(model)) return Math.max(requested, 8000)
+  return requested
+}
+
 async function callOnce(input: CallLlmInput): Promise<LlmResponse> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), input.timeoutMs ?? 90_000)
@@ -46,7 +53,7 @@ async function callOnce(input: CallLlmInput): Promise<LlmResponse> {
         model: input.model ?? input.config.model,
         messages: input.messages,
         temperature: input.temperature ?? 0.7,
-        max_tokens: input.maxTokens ?? 2000,
+        max_tokens: effectiveMaxTokens(input),
       }),
       signal: controller.signal,
     })

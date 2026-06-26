@@ -2,6 +2,7 @@ import type { HookProductBrief } from "@/lib/hook-generator"
 import type { HookNarrativeRole, HookOneShotIntent } from "@/lib/hook-one-shot"
 import type { HookRecommendationCard, SelectedCultureBorrowing } from "@/lib/hook-library"
 import {
+  listHookGenerationFewShots,
   listHookCategoryPlaybooks,
   listHookReferenceAssets,
   listHookTrendObservations,
@@ -103,6 +104,8 @@ export function injectHookResources(input: {
   })
   const audienceSituations = selectAudienceSituations({
     intent: input.intent,
+    intentText: input.intentText,
+    targetAudience: input.productBrief.marketingLogic.targetAudience,
     selectedHook: input.variant.selectedHook,
     productCategory: input.productContract.productCategory,
     role: input.variant.role,
@@ -113,7 +116,7 @@ export function injectHookResources(input: {
     category: hookStudioCategory,
     hookType: input.variant.selectedHook.hookType,
   })
-  const examples = buildExamples(libraryRefs, hookStudioCategory, input.variant.selectedHook.hookType)
+  const examples = buildExamples(libraryRefs, hookStudioCategory, input.variant.selectedHook.hookType, input.intent)
 
   return {
     productContract: input.productContract,
@@ -206,16 +209,26 @@ function claimRiskTagsForMarketing(sellingPoints: string[]) {
 
 function selectAudienceSituations(input: {
   intent: HookOneShotIntent
+  intentText?: string
+  targetAudience?: string[]
   selectedHook: HookRecommendationCard
   productCategory: string
   role: HookNarrativeRole
 }) {
+  const audienceText = [
+    input.intentText ?? "",
+    ...(input.targetAudience ?? []),
+  ].join(" ")
   return takeScored(AUDIENCE_SITUATION_PATTERNS, (item) => {
     let score = 0
     if (item.compatibleIntentTypes.includes(input.intent)) score += 5
     if (item.compatibleCategories.includes(input.productCategory)) score += 4
+    if (item.applicableProductCategories?.includes(input.productCategory)) score += 3
+    if (item.weakFitCategories?.includes(input.productCategory)) score -= 2
+    if (item.avoidForCategories?.includes(input.productCategory)) score -= 8
     if (item.compatibleHookTypes.includes(input.selectedHook.hookType)) score += 3
     if (input.role === "culture-fused" && item.id === "aud_creative_mismatch_viewer") score += 5
+    if (matchesAudienceSituationText(item, audienceText)) score += 7
     return score
   }, 3, 1)
 }
@@ -228,6 +241,9 @@ function selectAttentionMicroPattern(
   return takeScored(ATTENTION_MICRO_PATTERNS, (item) => {
     let score = item.parentHookType === selectedHook.hookType ? 10 : 0
     if (item.bestForIntentModes.includes(intent)) score += 4
+    if (matchesSelectedHookSubType(item, selectedHook.subType)) score += 8
+    if (selectedHook.subType === "audience_scene_callout" && item.id === "H4_C_AUDIENCE_SCENE_CALLOUT") score += 8
+    if (intent === "audience_first" && item.id === "H4_C_AUDIENCE_SCENE_CALLOUT") score += 2
     if (role === "culture-fused" && item.parentHookType === "H7") score += 6
     if (role === "contrast" && ["H2", "H5"].includes(item.parentHookType)) score += 3
     return score
@@ -242,6 +258,7 @@ function selectEventPrimitives(
   return takeScored(EVENT_PRIMITIVES, (item) => {
     let score = 0
     if (item.compatibleMicroPatternIds.includes(attentionMicroPattern.id)) score += 8
+    if (eventMatchesAttentionQuery(item, attentionMicroPattern)) score += 3
     if (item.compatibleIntentTypes.includes(intent)) score += 4
     if (role === "culture-fused" && item.eventKind.includes("cultural")) score += 6
     if (role === "contrast" && ["comparison_split", "repeated_failure"].includes(item.eventKind)) score += 4
@@ -416,8 +433,32 @@ function buildExamples(
   refs: HookResourceLibraryRefs,
   category: string,
   hookType: string,
+  intent: HookOneShotIntent,
 ): GoldHookExample[] {
   const examples: GoldHookExample[] = []
+  const fewShotRows = firstNonEmpty([
+    () => listHookGenerationFewShots({ category, hookType, intentMode: intent, size: 2 }).items,
+    () => listHookGenerationFewShots({ hookType, intentMode: intent, size: 2 }).items,
+    () => listHookGenerationFewShots({ hookType, size: 2 }).items,
+  ])
+  for (const fewShot of fewShotRows.slice(0, 1)) {
+    const first3Seconds = Object.entries(fewShot.expectedHookCard.first3Seconds)
+      .map(([time, beat]) => `${time}: ${beat}`)
+      .join(" / ")
+    examples.push({
+      id: `example_fs_${fewShot.id}`,
+      source: "hook_generation_few_shot",
+      summary: [
+        `${fewShot.expectedHookCard.hookTitle}: ${fewShot.expectedHookCard.shortScript}`,
+        `前三秒结构：${first3Seconds}`,
+        `可见证据：${fewShot.expectedHookCard.visualEvidence.join("、")}`,
+        `避免：${fewShot.badExampleToAvoid}`,
+        fewShot.expectedHookCard.safeGuardrailNote,
+      ].filter(Boolean).join("；"),
+      hookType,
+      category: fewShot.category,
+    })
+  }
   const referenceRows = listHookReferenceAssets({ category, hookType, size: 2 }).items
     .filter((item) => refs.referenceAssetIds.includes(item.id))
   for (const reference of referenceRows) {
@@ -471,6 +512,85 @@ function takeScored<T>(items: T[], scoreItem: (item: T) => number, max: number, 
 
 function unique(values: string[]) {
   return [...new Set(values.map((value) => value.trim()).filter(Boolean))]
+}
+
+function matchesAudienceSituationText(
+  item: typeof AUDIENCE_SITUATION_PATTERNS[number],
+  audienceText: string,
+) {
+  const normalizedInput = normalizeText(audienceText)
+  if (!normalizedInput) return false
+  return [
+    item.name,
+    item.lifeState,
+    ...item.exampleAudienceInputs,
+    ...item.recognitionSignals,
+    ...item.commonScenes,
+  ].some((value) => {
+    const normalizedValue = normalizeText(value)
+    return normalizedValue.length >= 2 && (
+      normalizedInput.includes(normalizedValue) ||
+      normalizedValue.includes(normalizedInput) ||
+      hasMeaningfulOverlap(normalizedInput, normalizedValue)
+    )
+  })
+}
+
+function matchesSelectedHookSubType(item: AttentionMicroPattern, subType?: string | null) {
+  const subTypeTokens = splitResourceTokens(subType)
+  if (subTypeTokens.length === 0) return false
+  const itemTokens = [
+    item.id,
+    item.name,
+    item.attentionJob,
+    item.stopSignalLogic,
+    ...item.eventQueryTags,
+    ...item.preferredShotFunctions,
+    ...item.preferredSoundFunctions,
+    ...item.preferredOverlayFunctions,
+  ].flatMap(splitResourceTokens)
+  return hasResourceTokenOverlap(subTypeTokens, itemTokens)
+}
+
+function eventMatchesAttentionQuery(event: EventPrimitive, attention: AttentionMicroPattern) {
+  const attentionTokens = [
+    ...attention.eventQueryTags,
+    ...attention.preferredShotFunctions,
+  ].flatMap(splitResourceTokens)
+  const eventTokens = [
+    event.eventKind,
+    event.name,
+    event.eventTemplate,
+    ...event.shotTags,
+  ].flatMap(splitResourceTokens)
+  return hasResourceTokenOverlap(attentionTokens, eventTokens)
+}
+
+function splitResourceTokens(value?: string | null) {
+  return String(value ?? "")
+    .toLowerCase()
+    .split(/[^a-z0-9\u4e00-\u9fa5]+/g)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 3 && !["first", "product", "bridge"].includes(token))
+}
+
+function hasResourceTokenOverlap(left: string[], right: string[]) {
+  return left.some((leftToken) =>
+    right.some((rightToken) => leftToken.includes(rightToken) || rightToken.includes(leftToken))
+  )
+}
+
+function normalizeText(value: string) {
+  return value.replace(/[\s,，。；;:：、/|]+/g, "").toLowerCase()
+}
+
+function hasMeaningfulOverlap(left: string, right: string) {
+  const ignored = new Set(["的人", "一个", "这个", "场景", "日常", "用户"])
+  for (let index = 0; index < right.length - 1; index += 1) {
+    const gram = right.slice(index, index + 2)
+    if (!ignored.has(gram) && left.includes(gram)) return true
+  }
+  return false
 }
 
 function uniqueBy<T>(items: T[], key: (item: T) => string) {

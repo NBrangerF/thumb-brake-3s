@@ -1,20 +1,192 @@
-# Fantastic Hook
+<div align="center">
+  <img src="./public/readme/banner-en.png" alt="Thumb Brake 3s banner showing a thumb braking on a short-video feed" width="100%" />
 
-Fantastic Hook is a local-first, LLM-powered short-video product Hook script generator.
+  <h1>Thumb Brake 3s</h1>
 
-It turns product context, audience signals, pain points, and a creative intent into three differentiated Hook script cards for ecommerce short video ideation.
+  <p><strong>Your product has 3 seconds. Make the thumb stop.</strong></p>
 
-Version 0.1 generates script cards and future video prompt drafts only. It does not submit video generation jobs, charge credits, require login, or persist project data to a database.
+  <p>
+    <a href="./README.md"><strong>English</strong></a> ·
+    <a href="./README.zh-CN.md">简体中文</a> ·
+    <a href="./README.es.md">Español</a>
+  </p>
 
-## Requirements
+  <p>
+    <a href="https://thumb-brake-3s.vercel.app"><strong>Live Demo</strong></a> ·
+    <a href="#video-cases">Video Cases</a> ·
+    <a href="#how-we-think-about-hooks">Hook Theory</a> ·
+    <a href="#quick-start">Quick Start</a> ·
+    <a href="#api">API</a> ·
+    <a href="./DEPLOY.md">Deploy</a> ·
+    <a href="./docs/project-guide.md">Project Guide</a>
+  </p>
+
+  <p>
+    <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white">
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
+    <img alt="pnpm" src="https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=white">
+    <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-7c3aed">
+    <img alt="Script first" src="https://img.shields.io/badge/v1-script--first-8b5cf6">
+  </p>
+</div>
+
+---
+
+## The 3-second hook engine for short-form product ads
+
+**Thumb Brake 3s** is an LLM-powered creative workspace that turns a product, a rough angle, and a short intent into **three structured short-video ad hooks**.
+
+It is not just another “write me a catchy line” generator.
+
+It builds hooks as a **3-second retention structure**:
+
+| Moment | Job | Output |
+|---|---|---|
+| **0–1s** | Stop the thumb | A sharp opening line or visual interruption |
+| **1–3s** | Prove relevance | Scene evidence, tension, identity, contrast, or curiosity |
+| **3–7s** | Bridge to product | A natural product/result bridge ready for production |
+
+The current release is **script and prompt generation only**. It does **not** submit video-generation jobs, require login, charge credits, store projects, or ship private platform dependencies.
+
+---
+
+## Demo
+
+<p align="center">
+  <a href="https://thumb-brake-3s.vercel.app">
+    <img src="./public/readme/hero.png" alt="Thumb Brake 3s UI screenshot" width="100%" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://thumb-brake-3s.vercel.app"><strong>Open the live demo →</strong></a>
+  ·
+  <a href="./docs/video-cases.md"><strong>Browse video cases →</strong></a>
+</p>
+
+---
+
+## Video cases
+
+These short examples show the kinds of first-second stop signals, scene evidence, and product-bridge moments the system is designed to plan.
+
+| Urban interruption | Interface curiosity | Product-as-hero motion |
+|---|---|---|
+| [![Two workers looking upward in an empty city street](./public/readme/video-posters/case-01.mp4.png)](./public/readme/videos/case-01.mp4) | [![Phone screen with a glowing crystal-like object](./public/readme/video-posters/case-02.mp4.png)](./public/readme/videos/case-02.mp4) | [![Robot vacuum floating over a city-like grid](./public/readme/video-posters/case-03.mp4.png)](./public/readme/videos/case-03.mp4) |
+
+| Self-relevance routine | Cultural action bridge | Close-up behavior proof |
+|---|---|---|
+| [![Woman looking at her skin in a bathroom mirror setting](./public/readme/video-posters/case-04.mp4.png)](./public/readme/videos/case-04.mp4) | [![Sneaker at the edge of a cliff above clouds](./public/readme/video-posters/case-05.mp4.png)](./public/readme/videos/case-05.mp4) | [![Close-up of brushing teeth at a bathroom sink](./public/readme/video-posters/case-06.mp4.png)](./public/readme/videos/case-06.mp4) |
+
+Read the full case notes in [docs/video-cases.md](./docs/video-cases.md).
+
+---
+
+## What it generates
+
+Give it a product like:
+
+```text
+Product: Kids probiotic toothpaste
+Category: Oral care / kids oral care
+Intent: My child refuses to brush teeth and always finds excuses.
+Duration: 7s
+```
+
+It returns three differentiated hook cards:
+
+```text
+Hook 1 · Pain
+0–1s  “Does your kid also cry the moment the toothbrush appears?”
+1–3s  Child hides in the corner; parent holds the toothbrush and hesitates.
+3–7s  Switch to a gentle grape-flavored kids toothpaste that makes brushing feel less like a fight.
+
+Hook 2 · Proof
+0–1s  “Cavities are not always about candy. Sometimes brushing is the real battle.”
+1–3s  Close-up of missed corners and a child refusing the minty sting.
+3–7s  Probiotic gum-care formula, gentle taste, cleaner routine.
+
+Hook 3 · Audience
+0–1s  “For parents of 3–6 year olds who negotiate every bedtime brush…”
+1–3s  Warm bathroom scene, sticker chart, tiny toothbrush, tired parent.
+3–7s  Make the first brush easier, then build the habit.
+```
+
+Each result can include:
+
+- hook title and strategy label
+- first-second visual direction
+- short script / dialogue
+- shot timing
+- text overlays
+- sound direction
+- product bridge
+- first-frame prompt
+- copy-ready future video prompt
+
+---
+
+## Why it is different
+
+Most hook generators stop at slogans.
+
+Thumb Brake 3s uses a resource-backed creative pipeline:
+
+- **Balanced H1–H7 hook library** — sensory, conflict, curiosity, self-relevance, proof, social signal, and cultural recognition patterns.
+- **3s retention contract** — every hook must earn attention, prove relevance, and bridge to product.
+- **Product identity lock** — the product should not drift into a different object or category.
+- **Audience + scene logic** — avoids generic “for moms / for women / for office workers” copy by grounding hooks in visible situations.
+- **Culture motif borrowing** — uses cultural structures and visual motifs without copying creator lines or copyrighted assets.
+- **Deterministic validation and repair** — catches weak structure before returning the final cards.
+- **Future video prompt compiler** — prepares structured prompts for downstream video tools, while keeping v1 script-first.
+
+---
+
+## How we think about hooks
+
+Thumb Brake 3s is built around a 3-second attention contract:
+
+- `0–1s`: stop the thumb
+- `1–3s`: prove relevance
+- `3–7s`: bridge into the product
+
+Read the aesthetic and technical breakdown:
+
+- [Hook Theory: The Thumb Brake 3s Deconstruction](./docs/hook-theory.md)
+- [中文：Hook 理论与拆解](./docs/hook-theory.zh-CN.md)
+- [Español: Teoría del Hook](./docs/hook-theory.es.md)
+
+---
+
+## Features
+
+| Feature | Status |
+|---|---:|
+| One-shot web UI | ✅ |
+| Local product image preview | ✅ |
+| Four creative intents: pain, audience, story, offer | ✅ |
+| 4–9 second script duration | ✅ |
+| OpenAI-compatible LLM endpoint | ✅ |
+| Three differentiated hook cards | ✅ |
+| Hook Studio resource library | ✅ |
+| Balanced 2026 pattern expansion | ✅ |
+| Culture motif resources | ✅ |
+| Deterministic validation and repair | ✅ |
+| Copy-ready future video prompt | ✅ |
+| Built-in video generation jobs | Not in v1 |
+| Accounts, billing, credits, database | Not included |
+
+---
+
+## Quick Start
+
+### Requirements
 
 - Node.js 24 recommended
 - pnpm 10+
 - An OpenAI-compatible chat completions endpoint
 
-The app requires LLM configuration. It does not generate fallback scripts when no key is configured.
-
-## Quick Start
+### Run locally
 
 ```bash
 pnpm install
@@ -22,7 +194,11 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-Open `http://localhost:3000`.
+Open:
+
+```text
+http://localhost:3000
+```
 
 Configure `.env.local` before generating scripts:
 
@@ -35,30 +211,140 @@ LLM_MODEL=your-chat-model
 
 Never commit `.env.local` or any real API key.
 
-## What It Generates
+> Thumb Brake 3s intentionally does not include a no-key fallback generator. If the LLM variables are missing, generation fails with `LLM_CONFIG_REQUIRED`.
 
-- Stop-scroll Hook concept
-- First-second visual idea
-- Short script or dialogue
-- Shot timing
-- Sound direction
-- Product bridge
-- Future video prompt draft
+---
 
-## Commands
+## Ways to use
+
+### 1. Use the hosted demo
+
+Open the public demo, enter product context, choose a creative angle, generate three hook scripts, and copy the result.
+
+[Open live demo →](https://thumb-brake-3s.vercel.app)
+
+### 2. Run your own local creative lab
+
+Use your own LLM endpoint and test hook variants privately on your machine.
 
 ```bash
+pnpm install
+cp .env.example .env.local
 pnpm dev
-pnpm test
-pnpm lint
-pnpm typecheck
-pnpm build
-pnpm start
 ```
 
-## Verification Gate
+### 3. Deploy your own instance
 
-Before publishing or deploying, run:
+Deploy to Vercel or any host that supports Next.js API routes and server-side environment variables.
+
+Read [DEPLOY.md](./DEPLOY.md).
+
+### 4. Integrate the API
+
+Call the built-in route from another frontend or workflow.
+
+```text
+POST /api/hook-generator/one-shot
+```
+
+### 5. Integrate the core
+
+Use the server-side generation graph directly inside another TypeScript/Next.js service.
+
+```ts
+import { runHookOneShotGraph } from "@/lib/hook-generator-v2/graph/run-hook-one-shot-graph"
+```
+
+---
+
+## API
+
+Example request:
+
+```bash
+curl -X POST http://localhost:3000/api/hook-generator/one-shot \
+  -H "Content-Type: application/json" \
+  -d '{
+    "productTitle": "Kids low-foam toothpaste",
+    "productImage": "",
+    "intent": "pain_first",
+    "intentText": "My child refuses to brush teeth and always finds excuses.",
+    "analysisHints": {
+      "productCategory": "oral_care"
+    },
+    "videoDuration": 7,
+    "videoRatio": "9:16",
+    "generateAudio": true
+  }'
+```
+
+Supported intents:
+
+```text
+pain_first
+audience_first
+creative_first
+offer_first
+```
+
+`videoDuration` supports integers from `4` to `9`.
+
+---
+
+## Project structure
+
+```text
+app/                         Next.js app and API routes
+components/hook-generator/   One-shot web UI
+data/hook-studio/            JSON/JSONL Hook Studio resource library
+lib/hook-generator-v2/       Generation graph, resources, validation, compiler
+lib/culture-motif-resources/ Culture motif ranking and borrowing resources
+lib/hook-one-shot.ts         Intent-based hook narrative selection
+lib/hook-generator.ts        LLM script generation and product identity locking
+lib/hook-library.ts          Resource loader and recommendation helpers
+lib/llm-client.ts            OpenAI-compatible chat completions client
+tests/                       Vitest coverage
+```
+
+For the full module-by-module guide, read [docs/project-guide.md](./docs/project-guide.md).
+
+---
+
+## Documentation
+
+- [Project Guide](./docs/project-guide.md) — full module and runtime map
+- [Hook Theory](./docs/hook-theory.md) — the 3-second attention model behind the generator
+- [Video Case Gallery](./docs/video-cases.md) — public video examples and notes
+- [Architecture](./docs/architecture.md) — layers, flow, and boundaries
+- [Deployment](./DEPLOY.md) — Vercel and Node deployment
+- [AI Usage Guide](./AI_USAGE.md) — prompts for Codex, Cursor, Claude Code, and other agents
+- [README Media Kit](./docs/readme-media-kit.md) — screenshots, videos, examples, and launch assets
+- [中文 README](./README.zh-CN.md)
+- [Español README](./README.es.md)
+
+---
+
+## What is not included
+
+Thumb Brake 3s is intentionally focused.
+
+It does not include:
+
+- built-in non-LLM fallback generation
+- login or user accounts
+- billing, credits, or usage metering
+- Prisma/database persistence
+- cloud file upload signing
+- Seedance, Sora, Veo, or other video job submission
+- production env files or real API keys
+
+Video generation provider adapters can be added later without changing the core script-first architecture.
+
+---
+
+## Verification
+
+Run before publishing or deploying:
 
 ```bash
 pnpm install
@@ -68,7 +354,7 @@ pnpm typecheck
 pnpm build
 ```
 
-Also confirm:
+Optional safety scan:
 
 ```bash
 find . -name .DS_Store -print
@@ -76,63 +362,37 @@ rg -n "sk-|api[_-]?key\s*[:=]|secret\s*[:=]|password\s*[:=]|BEGIN [A-Z ]*PRIVATE
 rg -n "@/lib/(auth|db|company-scope|platform-pricing|cost-feature)|@/app/api/(seedance|model-workbench)" .
 ```
 
-Expected result: no `.DS_Store`, no real secrets, and no private platform imports.
+Expected result: no local artifacts, no real secrets, and no private platform imports.
 
-## Project Structure
+---
 
-```text
-app/                         Next.js app and API routes
-components/hook-generator/   One-shot Hook Generator UI
-data/hook-studio/            Hook Library resources
-lib/hook-generator-v2/       Hook graph, resources, validators, compiler
-lib/culture-motif-resources/ Culture motif ranking resources
-lib/llm-client.ts            OpenAI-compatible LLM client
-lib/llm-config.ts            Env-backed LLM config
-tests/lib/hook-generator-v2/ Core tests
-docs/                        Architecture and release planning notes
-```
+## Roadmap
 
-## Runtime Flow
+- [x] README hero, multilingual docs, hook theory, and public video case gallery
+- [ ] Walkthrough demo video for the live app
+- [ ] More product category playbooks
+- [ ] More multilingual prompt resources
+- [ ] Optional export formats for creators and agencies
+- [ ] Optional provider adapters for video generation
+- [ ] Optional project persistence through user-provided storage
 
-1. User enters product title, optional product image URL, product hints, and Hook intent.
-2. UI posts to `/api/hook-generator/one-shot`.
-3. API validates request and LLM configuration.
-4. Core draws three differentiated Hook narratives.
-5. Resource injector attaches Hook Library and culture motif resources.
-6. LLM generates Hook scripts.
-7. Deterministic validator repairs structural issues.
-8. Prompt compiler prepares a future video prompt draft.
-9. API returns script cards and prompt artifacts.
+---
 
-## Included
+## Contributing
 
-- Standalone one-shot Hook script generation
-- Hook Library resources
-- Culture motif resources
-- Required OpenAI-compatible LLM script generation
-- Future video prompt compilation
-- Local development and production build support
+Issues and pull requests are welcome.
 
-## Excluded
+Good first contributions:
 
-- Built-in fallback generation
-- VideoSa billing or credits
-- Login or accounts
-- Prisma persistence
-- OSS upload signing
-- Seedance, Sora, or Veo job submission
-- Production env files
+- add more hook pattern cards
+- improve category playbooks
+- add tests for edge-case products
+- improve Spanish / Chinese documentation
+- build a provider adapter behind an explicit feature flag
 
-## Documentation
+Please keep the repo public-safe: no real keys, no private platform imports, no generated build output.
 
-- [Architecture](docs/architecture.md)
-- [Deployment](DEPLOY.md)
-- [AI usage guide](AI_USAGE.md)
-- [Public release build plan](docs/public-release-build-plan.md)
-
-## Repository
-
-GitHub: `https://github.com/NBrangerF/thumb-brake-3s.git`
+---
 
 ## License
 

@@ -111,14 +111,50 @@ function includesAny(source: string, needles: string[]) {
   return needles.some((needle) => needle && normalized.includes(needle.toLowerCase()))
 }
 
+const GENERIC_AUDIENCE_LABELS = [
+  "女生",
+  "男生",
+  "年轻人",
+  "上班族",
+  "宝妈",
+  "妈妈",
+  "用户",
+  "人群",
+  "大家",
+]
+
+const SCENE_SIGNAL_PATTERN = /久站|夜班|12\s*小时|9\s*to\s*5|下班|通勤|电梯|地铁|深夜|切换|多窗口|抱娃|出门|租房|桌面|玄关|刷牙|镜前|门口|健身|新手|铲屎|宠物毛|厨房|浴室|办公室|工牌|电脑包/i
+
+function audienceSignalText(values: Array<string | null | undefined>) {
+  return values.map((value) => String(value ?? "").trim()).filter(Boolean).join(" ")
+}
+
+function hasSpecificAudienceSignal(value: string) {
+  const normalized = value.replace(/\s+/g, "")
+  if (!normalized) return false
+  const stripped = normalized.replace(/^给/, "").replace(/的?(好物|方法|推荐|必备|必买)$/, "")
+  if (GENERIC_AUDIENCE_LABELS.includes(stripped)) return false
+  return stripped.length >= 4 || /护士|founder|创始人|产后|租房党|铲屎官|护理人员|通勤族|新手|小团队/i.test(stripped)
+}
+
+function hasSceneSignal(value: string) {
+  return SCENE_SIGNAL_PATTERN.test(value)
+}
+
+function isAudienceSceneCallout(card: HookRecommendationCard) {
+  return card.subType === "audience_scene_callout"
+}
+
 function cardSearchText(card: HookRecommendationCard) {
   return [
+    card.patternName,
     card.displayName,
     card.reason,
     card.exampleStructure,
     card.hookTypeLabel,
     card.subTypeLabel,
     card.categoryLabel,
+    ...(card.audienceFit ?? []),
     card.productBridgeRule,
   ].filter(Boolean).join(" ")
 }
@@ -129,6 +165,7 @@ export function hookPatternTicketWeight(input: {
   role: HookNarrativeRole
   productCategory?: string | null
   intentText?: string | null
+  targetAudience?: string[]
   usedHookTypes?: Set<string>
   usedSubTypes?: Set<string>
 }) {
@@ -140,6 +177,18 @@ export function hookPatternTicketWeight(input: {
   if (card.hookScope === "product_independent") tickets += role === "contrast" ? 3 : 1
   if (input.productCategory && card.categoryId && card.categoryId === input.productCategory) tickets += 2
   if (input.intentText && includesAny(cardSearchText(card), [input.intentText])) tickets += 2
+  if (isAudienceSceneCallout(card)) {
+    const signalText = audienceSignalText([input.intentText, ...(input.targetAudience ?? [])])
+    if (intent !== "audience_first") {
+      tickets = Math.max(1, Math.floor(tickets * 0.65))
+    } else if (hasSpecificAudienceSignal(signalText) && hasSceneSignal(signalText)) {
+      tickets += 12
+    } else if (hasSpecificAudienceSignal(signalText)) {
+      tickets += 6
+    } else {
+      tickets = Math.max(1, Math.floor(tickets * 0.7))
+    }
+  }
   if (input.usedHookTypes?.has(card.hookType)) tickets = Math.max(1, Math.floor(tickets * 0.38))
   if (input.usedSubTypes?.has(card.subType)) tickets = Math.max(1, Math.floor(tickets * 0.55))
 
@@ -208,6 +257,7 @@ export function drawHookNarrativesForIntent(input: {
   intent: HookOneShotIntent
   intentText: string
   productCategory?: string | null
+  targetAudience?: string[]
 }, options: DrawOptions = {}): HookNarrativeDraw[] {
   const random = options.random ?? Math.random
   const nonce = options.nonce ?? randomUUID()
@@ -234,6 +284,7 @@ export function drawHookNarrativesForIntent(input: {
         role,
         productCategory: input.productCategory,
         intentText: input.intentText,
+        targetAudience: input.targetAudience,
         usedHookTypes,
         usedSubTypes,
       }),

@@ -38,6 +38,7 @@ import type {
 
 const DEFAULT_DURATION_SECONDS = 5
 const DEFAULT_PRODUCT_IMAGE = "https://example.com/fantastic-hook-product-reference.png"
+const LOCAL_PRODUCT_IMAGE_REFERENCE = "fantastic-hook-local-product-reference://uploaded-image"
 const DEFAULT_VIDEO_MODEL = "script-only"
 const LLM_CONFIG_REQUIRED_CODE = "LLM_CONFIG_REQUIRED"
 
@@ -93,7 +94,7 @@ export async function runHookOneShotGraph(input: {
     const requestId = input.requestId ?? `hook-request-${randomUUID()}`
     const llmConfigResult = await resolveRequiredLlmConfig()
     if (!llmConfigResult.ok) return llmConfigResult
-    const productImage = input.input.productImage?.trim() || DEFAULT_PRODUCT_IMAGE
+    const productImage = normalizeProductImageReference(input.input.productImage) || DEFAULT_PRODUCT_IMAGE
     const product = buildOneShotProductBrief({
       productTitle: input.input.productTitle,
       productImage,
@@ -105,6 +106,7 @@ export async function runHookOneShotGraph(input: {
       intent: input.input.intent,
       intentText: input.input.intentText,
       productCategory: input.input.analysisHints?.productCategory,
+      targetAudience: input.input.analysisHints?.targetAudience,
     })
     const state = injectResourcesForHookRunState(buildHookRunState({
       requestId,
@@ -217,6 +219,13 @@ function normalizeDuration(value: unknown) {
   const numeric = typeof value === "number" ? value : Number(value)
   if (!Number.isFinite(numeric)) return DEFAULT_DURATION_SECONDS
   return Math.max(4, Math.min(9, Math.round(numeric)))
+}
+
+function normalizeProductImageReference(productImage?: string | null) {
+  const trimmed = productImage?.trim() ?? ""
+  if (!trimmed) return ""
+  if (/^data:image\//i.test(trimmed)) return LOCAL_PRODUCT_IMAGE_REFERENCE
+  return trimmed
 }
 
 async function buildOneShotScriptRun(input: {

@@ -28,7 +28,8 @@ describe("hook generator v2 P0 resource review", () => {
     expect(review.p0CategoryCoverage.every((item) => item.hasHookStudioRefs)).toBe(true)
     expect(review.resourceFamilyCounts).toMatchObject({
       p0CategoryRules: 14,
-      attentionMicroPatterns: 7,
+      audienceSituationPatterns: 42,
+      attentionMicroPatterns: 36,
       eventPrimitives: expect.any(Number),
       productBridgeRoles: 9,
       cultureMotifCards: 6,

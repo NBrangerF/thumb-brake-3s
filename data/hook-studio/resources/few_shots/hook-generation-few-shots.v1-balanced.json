@@ -1,0 +1,1141 @@
+{
+  "version": "v1-2026-balanced",
+  "purpose": "Balanced few-shots for H1-H7 short-video hook generation. Synthetic distilled examples only; no copied ads or creator transcripts.",
+  "contract": "0-1s stop signal; 1-3s evidence/conflict/gap/scene recognition; 3-5s product/result bridge.",
+  "fewShots": [
+    {
+      "id": "FS_H1_01",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "food_beverage",
+      "productInput": "snack",
+      "audienceInput": "夜间刷手机",
+      "patternRefs": [
+        "asmr_interrupt"
+      ],
+      "badExampleToAvoid": "generic food_beverage packshot",
+      "expectedHookCard": {
+        "hookTitle": "开袋第一声",
+        "first3Seconds": {
+          "0-1s": "开袋第一声 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「开袋第一声」把人叫回来。",
+        "visualEvidence": [
+          "开袋声",
+          "碎屑",
+          "手部近景"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H1_02",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "cleaning",
+      "productInput": "foam cleaner",
+      "audienceInput": "厨房油渍",
+      "patternRefs": [
+        "texture_proof"
+      ],
+      "badExampleToAvoid": "generic cleaning packshot",
+      "expectedHookCard": {
+        "hookTitle": "泡沫边界",
+        "first3Seconds": {
+          "0-1s": "泡沫边界 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「泡沫边界」把人叫回来。",
+        "visualEvidence": [
+          "喷头",
+          "泡沫",
+          "油渍边界"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H1_03",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "ai_tools",
+      "productInput": "workflow assistant",
+      "audienceInput": "消息过载",
+      "patternRefs": [
+        "sound_cut"
+      ],
+      "badExampleToAvoid": "generic ai_tools packshot",
+      "expectedHookCard": {
+        "hookTitle": "静音红点",
+        "first3Seconds": {
+          "0-1s": "静音红点 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「静音红点」把人叫回来。",
+        "visualEvidence": [
+          "通知",
+          "红点",
+          "静音"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H1_04",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "storage_home",
+      "productInput": "clip organizer",
+      "audienceInput": "桌面收纳",
+      "patternRefs": [
+        "haptic_pop"
+      ],
+      "badExampleToAvoid": "generic storage_home packshot",
+      "expectedHookCard": {
+        "hookTitle": "扣上的那一下",
+        "first3Seconds": {
+          "0-1s": "扣上的那一下 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「扣上的那一下」把人叫回来。",
+        "visualEvidence": [
+          "卡扣",
+          "线材",
+          "手部动作"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H1_05",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "beauty",
+      "productInput": "mirror/makeup product",
+      "audienceInput": "出门前镜前",
+      "patternRefs": [
+        "lens_interrupt"
+      ],
+      "badExampleToAvoid": "generic beauty packshot",
+      "expectedHookCard": {
+        "hookTitle": "镜头被擦开",
+        "first3Seconds": {
+          "0-1s": "镜头被擦开 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「镜头被擦开」把人叫回来。",
+        "visualEvidence": [
+          "镜面",
+          "手部遮挡",
+          "揭示"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H1_06",
+      "hookType": "H1",
+      "intentMode": "creative_first",
+      "category": "kitchen_tools",
+      "productInput": "small kitchen tool",
+      "audienceInput": "小厨房",
+      "patternRefs": [
+        "scale_snap"
+      ],
+      "badExampleToAvoid": "generic kitchen_tools packshot",
+      "expectedHookCard": {
+        "hookTitle": "尺度瞬变",
+        "first3Seconds": {
+          "0-1s": "尺度瞬变 的可见/可听信号先出现",
+          "1-3s": "1-3 秒补充质地、声音、尺度或材质证据",
+          "3-5s": "3-5 秒产品作为信号来源或解决动作进入"
+        },
+        "shortScript": "先别介绍产品，先让「尺度瞬变」把人叫回来。",
+        "visualEvidence": [
+          "近景",
+          "镜头后移",
+          "小台面"
+        ],
+        "safeGuardrailNote": "H1 不能只靠字幕，必须有感官事件"
+      }
+    },
+    {
+      "id": "FS_H2_01",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "cleaning",
+      "productInput": "desk wipe",
+      "audienceInput": "办公桌咖啡",
+      "patternRefs": [
+        "micro_disaster"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "咖啡快洒了",
+        "first3Seconds": {
+          "0-1s": "咖啡快洒了 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "倾斜杯子",
+          "纸张",
+          "手部反应"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H2_02",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "beauty",
+      "productInput": "quick fix product",
+      "audienceInput": "电梯前补救",
+      "patternRefs": [
+        "room_goes_quiet"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "全场突然安静",
+        "first3Seconds": {
+          "0-1s": "全场突然安静 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "电梯",
+          "同事停顿",
+          "低头"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H2_03",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "mother_baby",
+      "productInput": "diaper bag organizer",
+      "audienceInput": "出门包",
+      "patternRefs": [
+        "wrong_item_panic"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "拿错那瓶",
+        "first3Seconds": {
+          "0-1s": "拿错那瓶 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "门口",
+          "妈妈包",
+          "拿错物品"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H2_04",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "ai_tools",
+      "productInput": "workflow tool",
+      "audienceInput": "小团队工作流",
+      "patternRefs": [
+        "resource_spillover"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "标签页溢出来",
+        "first3Seconds": {
+          "0-1s": "标签页溢出来 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "标签页",
+          "Slack",
+          "表格"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H2_05",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "food_beverage",
+      "productInput": "snack/drink",
+      "audienceInput": "朋友聚会",
+      "patternRefs": [
+        "companion_reaction_escalation"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "朋友先发现",
+        "first3Seconds": {
+          "0-1s": "朋友先发现 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "朋友反应",
+          "伸手",
+          "桌面"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H2_06",
+      "hookType": "H2",
+      "intentMode": "pain_first",
+      "category": "kitchen_tools",
+      "productInput": "prep tool",
+      "audienceInput": "工作日晚饭",
+      "patternRefs": [
+        "task_timer_trap"
+      ],
+      "badExampleToAvoid": "overdramatic unsafe conflict",
+      "expectedHookCard": {
+        "hookTitle": "晚饭倒计时",
+        "first3Seconds": {
+          "0-1s": "晚饭倒计时 的冲突临界帧",
+          "1-3s": "1-3 秒让冲突原因可见",
+          "3-5s": "3-5 秒产品作为救场/减压动作进入"
+        },
+        "shortScript": "不是制造大灾难，而是把熟悉的小冲突卡在第一秒。",
+        "visualEvidence": [
+          "锅盖",
+          "手机消息",
+          "台面"
+        ],
+        "safeGuardrailNote": "H2 用轻冲突，不羞辱、不危险"
+      }
+    },
+    {
+      "id": "FS_H3_01",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "cleaning",
+      "productInput": "surface cleaner",
+      "audienceInput": "台面清洁",
+      "patternRefs": [
+        "proof_without_context"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "先看结果",
+        "first3Seconds": {
+          "0-1s": "先看结果 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "结果近景",
+          "旧痕迹",
+          "手部动作"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H3_02",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "womenswear",
+      "productInput": "commuter outfit item",
+      "audienceInput": "上班穿搭",
+      "patternRefs": [
+        "two_choice_gap"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "A 还是 B",
+        "first3Seconds": {
+          "0-1s": "A 还是 B 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "左右对比",
+          "电梯",
+          "会议室"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H3_03",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "storage_home",
+      "productInput": "organizer",
+      "audienceInput": "租房桌面",
+      "patternRefs": [
+        "negative_space_question"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "空出来的位置",
+        "first3Seconds": {
+          "0-1s": "空出来的位置 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "留白",
+          "桌面杂物",
+          "产品位置"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H3_04",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "personal_care",
+      "productInput": "portable care product",
+      "audienceInput": "出门前",
+      "patternRefs": [
+        "reverse_order_demo"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "倒着演示",
+        "first3Seconds": {
+          "0-1s": "倒着演示 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "门口",
+          "倒序",
+          "手部动作"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H3_05",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "kitchen_tools",
+      "productInput": "faucet extender",
+      "audienceInput": "水槽冲洗",
+      "patternRefs": [
+        "hidden_ingredient_reveal"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "隐藏小部件",
+        "first3Seconds": {
+          "0-1s": "隐藏小部件 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "接口",
+          "水流",
+          "转轴"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H3_06",
+      "hookType": "H3",
+      "intentMode": "creative_first",
+      "category": "ai_tools",
+      "productInput": "meeting notes tool",
+      "audienceInput": "团队会议",
+      "patternRefs": [
+        "future_pacing_gap"
+      ],
+      "badExampleToAvoid": "answer revealed too early",
+      "expectedHookCard": {
+        "hookTitle": "未来画面",
+        "first3Seconds": {
+          "0-1s": "未来画面 的缺口先出现",
+          "1-3s": "1-3 秒延迟答案但给线索",
+          "3-5s": "3-5 秒产品成为答案/原因"
+        },
+        "shortScript": "先把问题留住，再用一个动作解释它。",
+        "visualEvidence": [
+          "会后清单",
+          "会议桌",
+          "打码任务"
+        ],
+        "safeGuardrailNote": "H3 不要第一秒讲完答案"
+      }
+    },
+    {
+      "id": "FS_H4_01",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "personal_care",
+      "productInput": "foot care product",
+      "audienceInput": "每天久站的护士",
+      "patternRefs": [
+        "audience_scene_callout"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "护士下班换鞋",
+        "first3Seconds": {
+          "0-1s": "每天久站的护士 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "工牌",
+          "换鞋",
+          "小腿"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H4_02",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "ai_tools",
+      "productInput": "workflow tool",
+      "audienceInput": "小团队 founder",
+      "patternRefs": [
+        "audience_scene_callout"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "Founder 六个标签页",
+        "first3Seconds": {
+          "0-1s": "小团队 founder 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "台灯",
+          "标签页",
+          "表格"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H4_03",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "personal_care",
+      "productInput": "portable routine product",
+      "audienceInput": "出门前",
+      "patternRefs": [
+        "situation_callout"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "鞋穿好才想起",
+        "first3Seconds": {
+          "0-1s": "出门前 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "鞋",
+          "门把",
+          "低头"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H4_04",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "personal_care",
+      "productInput": "hair care product",
+      "audienceInput": "长发洗头日",
+      "patternRefs": [
+        "routine_mirror"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "长发洗头日",
+        "first3Seconds": {
+          "0-1s": "长发洗头日 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "梳子",
+          "毛巾",
+          "发尾"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H4_05",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "mother_baby",
+      "productInput": "diaper bag organizer",
+      "audienceInput": "新手爸妈",
+      "patternRefs": [
+        "role_pressure"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "新手爸妈出门包",
+        "first3Seconds": {
+          "0-1s": "新手爸妈 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "尿布包",
+          "奶瓶",
+          "湿巾"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H4_06",
+      "hookType": "H4",
+      "intentMode": "audience_first",
+      "category": "storage_home",
+      "productInput": "small space shelf",
+      "audienceInput": "租房党",
+      "patternRefs": [
+        "audience_scene_callout"
+      ],
+      "badExampleToAvoid": "generic audience label only",
+      "expectedHookCard": {
+        "hookTitle": "租房小厨房",
+        "first3Seconds": {
+          "0-1s": "租房党 被点名或场景被点中",
+          "1-3s": "1-3 秒出现至少两个识别信号",
+          "3-5s": "3-5 秒产品承接这个生活节点"
+        },
+        "shortScript": "不是“给 XX 人”，而是让这个人看到自己的那一秒。",
+        "visualEvidence": [
+          "窄台面",
+          "柜门",
+          "白墙"
+        ],
+        "safeGuardrailNote": "H4 必须人群/场景 + 证据 + 产品桥"
+      }
+    },
+    {
+      "id": "FS_H5_01",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "ai_tools",
+      "productInput": "meeting notes tool",
+      "audienceInput": "团队会议",
+      "patternRefs": [
+        "receipt_proof"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "会后清单",
+        "first3Seconds": {
+          "0-1s": "会后清单 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "行动清单",
+          "负责人打码",
+          "会议标签"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H5_02",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "mother_baby",
+      "productInput": "diaper bag organizer",
+      "audienceInput": "新手爸妈",
+      "patternRefs": [
+        "checklist_proof"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "打包清单",
+        "first3Seconds": {
+          "0-1s": "打包清单 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "清单",
+          "包内物品",
+          "勾选"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H5_03",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "cleaning",
+      "productInput": "cleaning product",
+      "audienceInput": "油污台面",
+      "patternRefs": [
+        "one_action_proof"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "一擦一条线",
+        "first3Seconds": {
+          "0-1s": "一擦一条线 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "擦拭边界",
+          "手部",
+          "台面"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H5_04",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "ai_tools",
+      "productInput": "task tool",
+      "audienceInput": "内容运营",
+      "patternRefs": [
+        "ui_state_change"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "UI 状态变化",
+        "first3Seconds": {
+          "0-1s": "UI 状态变化 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "红点",
+          "任务卡",
+          "状态变化"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H5_05",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "womenswear",
+      "productInput": "stretch fabric item",
+      "audienceInput": "通勤穿搭",
+      "patternRefs": [
+        "durability_moment"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "轻轻一扯",
+        "first3Seconds": {
+          "0-1s": "轻轻一扯 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "布料",
+          "轻拉",
+          "边线"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H5_06",
+      "hookType": "H5",
+      "intentMode": "offer_first",
+      "category": "food_beverage",
+      "productInput": "drink/snack",
+      "audienceInput": "朋友试吃",
+      "patternRefs": [
+        "sensory_reaction_proof"
+      ],
+      "badExampleToAvoid": "unsupported proof claim",
+      "expectedHookCard": {
+        "hookTitle": "朋友第二口",
+        "first3Seconds": {
+          "0-1s": "朋友第二口 先作为证据出现",
+          "1-3s": "1-3 秒展示证明路径",
+          "3-5s": "3-5 秒产品解释证据来源"
+        },
+        "shortScript": "先给证据，再给解释；不要先给口号。",
+        "visualEvidence": [
+          "朋友反应",
+          "第二次伸手",
+          "食品近景"
+        ],
+        "safeGuardrailNote": "H5 证据必须可见、可验证或弱化表达"
+      }
+    },
+    {
+      "id": "FS_H6_01",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "beauty",
+      "productInput": "quick makeup product",
+      "audienceInput": "上班前",
+      "patternRefs": [
+        "creator_reply"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "评论问来不及吗",
+        "first3Seconds": {
+          "0-1s": "评论问来不及吗 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "合成评论",
+          "镜前",
+          "手部动作"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H6_02",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "food_beverage",
+      "productInput": "snack/drink",
+      "audienceInput": "室友场景",
+      "patternRefs": [
+        "roommate_reaction"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "室友先拿",
+        "first3Seconds": {
+          "0-1s": "室友先拿 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "室友",
+          "伸手",
+          "桌面"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H6_03",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "ai_tools",
+      "productInput": "workflow tool",
+      "audienceInput": "SaaS buyer",
+      "patternRefs": [
+        "customer_objection_reply"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "客户异议直接测",
+        "first3Seconds": {
+          "0-1s": "客户异议直接测 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "合成异议",
+          "流程图",
+          "标签页"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H6_04",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "cleaning",
+      "productInput": "cleaning tool",
+      "audienceInput": "清洁对比",
+      "patternRefs": [
+        "comment_section_standoff"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "评论区左右站队",
+        "first3Seconds": {
+          "0-1s": "评论区左右站队 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "合成评论",
+          "左右测试",
+          "污渍"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H6_05",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "ai_tools",
+      "productInput": "builder tool",
+      "audienceInput": "founder/maker",
+      "patternRefs": [
+        "building_in_public"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "公开构建",
+        "first3Seconds": {
+          "0-1s": "公开构建 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "打码报错",
+          "构建过程",
+          "创始人"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H6_06",
+      "hookType": "H6",
+      "intentMode": "creative_first",
+      "category": "kitchen_tools",
+      "productInput": "kitchen gadget",
+      "audienceInput": "家庭餐桌",
+      "patternRefs": [
+        "family_table_test"
+      ],
+      "badExampleToAvoid": "fake social proof",
+      "expectedHookCard": {
+        "hookTitle": "餐桌先投票",
+        "first3Seconds": {
+          "0-1s": "餐桌先投票 的社交信号先出现",
+          "1-3s": "1-3 秒让他人反应/异议可见",
+          "3-5s": "3-5 秒产品成为被验证对象"
+        },
+        "shortScript": "让别人先停一下，比自己夸十句更像真实场景。",
+        "visualEvidence": [
+          "餐桌",
+          "两方案",
+          "家人手"
+        ],
+        "safeGuardrailNote": "H6 不伪造评论/共识/夸张反应"
+      }
+    },
+    {
+      "id": "FS_H7_01",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "beauty",
+      "productInput": "lip product",
+      "audienceInput": "怀旧自拍",
+      "patternRefs": [
+        "nostalgia_reset"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "闪光重启",
+        "first3Seconds": {
+          "0-1s": "闪光重启 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "闪光",
+          "镜前",
+          "贴纸感"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    },
+    {
+      "id": "FS_H7_02",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "food_beverage",
+      "productInput": "local snack/tea",
+      "audienceInput": "本地小店",
+      "patternRefs": [
+        "local_flavour"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "本地手作先出现",
+        "first3Seconds": {
+          "0-1s": "本地手作先出现 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "手作",
+          "蒸汽",
+          "小店"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    },
+    {
+      "id": "FS_H7_03",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "storage_home",
+      "productInput": "desk organizer",
+      "audienceInput": "桌面乱",
+      "patternRefs": [
+        "surreal_silliness"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "桌面怪兽",
+        "first3Seconds": {
+          "0-1s": "桌面怪兽 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "线材",
+          "便签",
+          "键盘"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    },
+    {
+      "id": "FS_H7_04",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "pet",
+      "productInput": "pet cleanup product",
+      "audienceInput": "养宠日常",
+      "patternRefs": [
+        "reality_show_confessional"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "真人秀告白",
+        "first3Seconds": {
+          "0-1s": "真人秀告白 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "告白切镜",
+          "爪印",
+          "宠物"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    },
+    {
+      "id": "FS_H7_05",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "cleaning",
+      "productInput": "home cleaning tool",
+      "audienceInput": "家务闯关",
+      "patternRefs": [
+        "quest_ui_overlay"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "任务 UI",
+        "first3Seconds": {
+          "0-1s": "任务 UI 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "任务框",
+          "玄关",
+          "鞋印"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    },
+    {
+      "id": "FS_H7_06",
+      "hookType": "H7",
+      "intentMode": "creative_first",
+      "category": "womenswear",
+      "productInput": "office outfit item",
+      "audienceInput": "office-core",
+      "patternRefs": [
+        "aesthetic_subculture_code"
+      ],
+      "badExampleToAvoid": "copied trend/IP/style only",
+      "expectedHookCard": {
+        "hookTitle": "办公室语法",
+        "first3Seconds": {
+          "0-1s": "办公室语法 的文化/格式语法先被识别",
+          "1-3s": "1-3 秒让格式变成动作，不只是滤镜",
+          "3-5s": "3-5 秒产品进入该格式的任务链"
+        },
+        "shortScript": "借格式，不借原台词；借语法，不借 IP。",
+        "visualEvidence": [
+          "工牌",
+          "电梯镜",
+          "电脑包"
+        ],
+        "safeGuardrailNote": "H7 必须有产品桥，不复制音频/IP/原梗"
+      }
+    }
+  ]
+}

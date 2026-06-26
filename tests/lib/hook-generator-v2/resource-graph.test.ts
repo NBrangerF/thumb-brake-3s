@@ -20,15 +20,15 @@ describe("hook generator v2 resource graph", () => {
     ])
     expect(graph.familyCounts).toMatchObject({
       category_rule: 14,
-      audience_situation: 5,
-      attention_micro_pattern: 7,
-      event_primitive: 12,
+      audience_situation: 42,
+      attention_micro_pattern: 36,
+      event_primitive: 13,
       product_bridge_role: 9,
       culture_motif: 6,
       proof_visualization: 8,
-      shot_card: 13,
-      constraint_rule: 8,
-      failure_mode: 5,
+      shot_card: 19,
+      constraint_rule: 14,
+      failure_mode: 14,
     })
     expect(graph.familyCounts.proof_mode).toBeGreaterThanOrEqual(12)
     expect(graph.familyCounts.hook_studio_category).toBeGreaterThanOrEqual(10)

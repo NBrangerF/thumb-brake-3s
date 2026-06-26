@@ -201,6 +201,172 @@ function brokenAsset(): HookScriptAsset {
   }
 }
 
+function audienceSceneSpec(): ScriptCreativeSpec {
+  return {
+    task: "generate_hook_script_asset",
+    duration: 5,
+    platform: "short_video_feed",
+    productLock: {
+      productName: "轻感腿部护理凝胶",
+      category: "personal_care",
+      inferredSubCategory: "general_ecommerce_product",
+      mustShowSignals: ["凝胶软管", "透明凝胶"],
+      usageSignals: ["涂抹", "放在包旁"],
+      forbiddenConfusions: ["药品", "医疗器械"],
+      allowedProductActions: ["涂抹", "放在包旁"],
+    },
+    intentContract: {
+      intentType: "audience_first",
+      userIntentText: "给每天久站的护士",
+      variantRole: "intent-direct",
+      creativeHypothesis: "场景化人群点名 Hook：0-1 秒点名人群，1-3 秒给场景证据。",
+    },
+    resourceIds: {
+      audienceSituationIds: ["aud_nurse_long_shift"],
+      attentionMicroPatternId: "H4_C_AUDIENCE_SCENE_CALLOUT",
+      eventPrimitiveIds: ["EVT_AUD_001"],
+      productBridgeRoleIds: ["BRIDGE_SOLUTION_CLUE"],
+      proofVisualizationIds: ["PROOF_CONTEXT_FIT"],
+      shotCardIds: ["SHOT_THRESHOLD_SCENE"],
+      constraintRuleIds: ["CONSTRAINT_AUDIENCE_SCENE_EVIDENCE"],
+      failureWarningIds: ["FAIL_AUDIENCE_LABEL_ONLY"],
+      exampleIds: ["example_1"],
+    },
+    hardRules: ["人群点名 Hook 必须包含场景识别信号和产品承接"],
+  }
+}
+
+function audienceSceneBundle(): HookCreativeResourceBundle {
+  return {
+    ...bundle(),
+    productContract: {
+      productName: "轻感腿部护理凝胶",
+      productCategory: "personal_care",
+      inferredSubCategory: "general_ecommerce_product",
+      visualAnchors: ["凝胶软管", "透明凝胶"],
+      packagingSignals: ["个人护理包装"],
+      usageAnchors: ["涂抹", "放在包旁"],
+      typicalUseScenes: ["更衣区"],
+      allowedProductActions: ["涂抹", "放在包旁"],
+      forbiddenVisualConfusions: ["药品", "医疗器械"],
+      claimRiskTags: [],
+      modelRiskTags: [],
+      source: {
+        productAnalysisUsed: true,
+        fallbackCategoryRuleIds: ["p0_general_ecommerce"],
+      },
+    },
+    audienceSituations: [{
+      id: "aud_nurse_long_shift",
+      name: "久站护士下班瞬间",
+      lifeState: "连续站立或走动一整班后，终于换鞋、坐下或整理工牌",
+      emotionalTriggers: ["累但不能松垮"],
+      hiddenDoubts: ["会不会太麻烦"],
+      likelyScrollReasons: ["工牌/走廊/换鞋瞬间太具体"],
+      recognitionSignals: ["工牌挂绳", "冷白走廊灯", "下班换鞋", "手扶小腿", "袜口压痕"],
+      commonScenes: ["医院走廊", "更衣区"],
+      compatibleIntentTypes: ["audience_first"],
+      compatibleCategories: ["personal_care"],
+      compatibleHookTypes: ["H4"],
+      compatibleEventKinds: ["audience_scene_callout"],
+      exampleAudienceInputs: ["每天久站的护士"],
+    }],
+    bridgeCandidates: [{
+      id: "BRIDGE_SOLUTION_CLUE",
+      role: "solution_clue",
+      name: "解决线索",
+      definition: "商品作为换一种方法的线索进入",
+      bestForHookTypes: ["H4"],
+      bestForIntentModes: ["audience_first"],
+      bestForProductCategoryTags: ["personal_care"],
+      entryTimingRules: [],
+      requiredPreEntryTension: [],
+      entryActionTemplates: [],
+      compatibleEventKinds: ["audience_scene_callout"],
+      compatibleProofTags: [],
+      compatibleCulturalMotifTypes: [],
+      recommendedShotIds: ["SHOT_THRESHOLD_SCENE"],
+      textOverlaySyntaxHints: [],
+      soundHints: [],
+      avoidHardSellRules: [],
+      validatorChecks: [],
+    }],
+    cultureMotif: null,
+    resourceIds: {
+      audienceSituationIds: ["aud_nurse_long_shift"],
+      attentionMicroPatternId: "H4_C_AUDIENCE_SCENE_CALLOUT",
+      eventPrimitiveIds: ["EVT_AUD_001"],
+      productBridgeRoleIds: ["BRIDGE_SOLUTION_CLUE"],
+      proofVisualizationIds: ["PROOF_CONTEXT_FIT"],
+      shotCardIds: ["SHOT_THRESHOLD_SCENE"],
+      constraintRuleIds: ["CONSTRAINT_AUDIENCE_SCENE_EVIDENCE"],
+      failureWarningIds: ["FAIL_AUDIENCE_LABEL_ONLY"],
+      exampleIds: ["example_1"],
+    },
+    retrievalPolicy: {
+      intent: "audience_first",
+      role: "intent-direct",
+      bounded: true,
+    },
+  } as HookCreativeResourceBundle
+}
+
+function genericAudienceAsset(): HookScriptAsset {
+  return {
+    ...brokenAsset(),
+    hookSummary: "给女生的好物",
+    audienceStopReason: "女生会停下来看",
+    hookMechanism: {
+      hookType: "H4",
+      microPatternId: "H4_C_AUDIENCE_SCENE_CALLOUT",
+      mechanismName: "场景化人群点名",
+      stopSignal: "给女生",
+      tensionEngine: "人群点名",
+      curiosityGap: "为什么适合她们",
+      payoffStyle: "产品承接",
+    },
+    productRole: {
+      role: "solution_clue",
+      entryTime: "3-5s",
+      entryAction: "稍后再说",
+      whyItBelongs: "适合女生",
+      avoidHardSell: true,
+      noFullClaim: true,
+    },
+    cultureFusionMechanism: undefined,
+    timelineShots: [{
+      time: "0-1s",
+      retentionPurpose: "stop_scroll",
+      scene: "普通背景",
+      subject: "女生",
+      action: "看向镜头",
+      camera: "中近景",
+      sound: "轻音乐",
+      textOverlay: "女生必备",
+      productVisibility: "none",
+      mustShow: ["女生"],
+      mustAvoid: [],
+      transitionToNextShot: "继续解释",
+    }],
+    textOverlay: ["女生必备"],
+    firstFrameIntent: {
+      stopSignal: "给女生",
+      composition: "普通背景",
+      emotion: "好奇",
+      mustShow: ["女生"],
+      mustAvoid: [],
+    },
+    videoPromptHints: {
+      visualMood: "写实手机 UGC",
+      cameraBehavior: "中近景",
+      keyObjects: ["女生"],
+      motionPriorities: ["看向镜头"],
+      avoid: [],
+    },
+    riskFlags: [],
+  }
+}
+
 describe("hook generator v2 targeted repair", () => {
   it("repairs deterministic quality failures into a passing script asset", () => {
     const scriptCreativeSpec = spec()
@@ -275,5 +441,36 @@ describe("hook generator v2 targeted repair", () => {
     expect(result.repairAttempts).toBe(1)
     expect(result.repairHistory).toHaveLength(1)
     expect(result.repairHistory[0].attempt).toBe(1)
+  })
+
+  it("repairs generic audience labels into scene-backed audience callouts", () => {
+    const scriptCreativeSpec = audienceSceneSpec()
+    const resourceBundle = audienceSceneBundle()
+    const before = validateHookScriptAsset({
+      scriptAsset: genericAudienceAsset(),
+      scriptCreativeSpec,
+      resourceBundle,
+    })
+
+    expect(before.status).toBe("fail")
+    expect(before.issues.map((issue) => issue.code)).toEqual(expect.arrayContaining([
+      "GENERIC_AUDIENCE_LABEL",
+      "AUDIENCE_LABEL_WITHOUT_SCENE",
+      "AUDIENCE_CALLOUT_NO_BRIDGE",
+    ]))
+
+    const result = validateAndRepairHookScriptAsset({
+      scriptAsset: genericAudienceAsset(),
+      scriptCreativeSpec,
+      resourceBundle,
+      maxRepairAttempts: 1,
+    })
+
+    expect(result.qualityGate.status).toBe("pass")
+    expect(result.scriptAsset.timelineShots[0].mustShow).toEqual(expect.arrayContaining([
+      "工牌挂绳",
+      "冷白走廊灯",
+    ]))
+    expect(result.scriptAsset.productRole.entryAction).toContain("轻感腿部护理凝胶")
   })
 })
