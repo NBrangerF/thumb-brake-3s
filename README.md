@@ -77,6 +77,10 @@ These short examples show the kinds of first-second stop signals, scene evidence
       <strong>Urban interruption</strong><br />
       <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
       <br /><a href="./public/readme/videos/case-01.mp4">Open MP4</a>
+
+https://github.com/user-attachments/assets/a438c6b3-3d41-4032-8f82-cf1b9c696077
+
+
     </td>
     <td width="33%">
       <strong>Interface curiosity</strong><br />
