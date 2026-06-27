@@ -65,40 +65,39 @@
 
 <table>
   <tr>
-    <td width="33%">
-      <strong>城市场景打断</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-01.mp4">打开 MP4</a>
-    </td>
-    <td width="33%">
-      <strong>UI 好奇缺口</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-02.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-02.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-02.mp4">打开 MP4</a>
-    </td>
-    <td width="33%">
-      <strong>产品英雄运动</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-03.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-03.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-03.mp4">打开 MP4</a>
-    </td>
+    <td width="33%" align="center"><strong>▶ Urban interruption</strong></td>
+    <td width="33%" align="center"><strong>▶ Interface curiosity</strong></td>
+    <td width="33%" align="center"><strong>▶ Product-as-hero motion</strong></td>
   </tr>
   <tr>
     <td width="33%">
-      <strong>自我相关日常</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-04.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-04.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-04.mp4">打开 MP4</a>
+      <video src="https://github.com/user-attachments/assets/a438c6b3-3d41-4032-8f82-cf1b9c696077" controls muted width="100%"></video>
     </td>
     <td width="33%">
-      <strong>文化动作桥接</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-05.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-05.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-05.mp4">打开 MP4</a>
+      <video src="https://github.com/user-attachments/assets/7ff163a8-137c-430b-86c0-c9961e19398d" controls muted width="100%"></video>
     </td>
     <td width="33%">
-      <strong>近景行为证明</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-06.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-06.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-06.mp4">打开 MP4</a>
+      <video src="https://github.com/user-attachments/assets/93ee4e1f-02ad-43de-91c4-4a79a1c10864" controls muted width="100%"></video>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><strong>▶ Self-relevance routine</strong></td>
+    <td width="33%" align="center"><strong>▶ Cultural action bridge</strong></td>
+    <td width="33%" align="center"><strong>▶ Close-up behavior proof</strong></td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/cbb49a85-21df-4ce3-a4ae-b5d50c3ddee2" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/d4c88dc3-c691-457a-a961-77c07fe55018" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/1ae75314-1291-46e6-b147-621c75fa371a" controls muted width="100%"></video>
     </td>
   </tr>
 </table>
+
 
 完整案例说明见 [docs/video-cases.md](./docs/video-cases.md)。
 
