@@ -71,46 +71,25 @@ The current release is **script and prompt generation only**. It does **not** su
 
 These short examples show the kinds of first-second stop signals, scene evidence, and product-bridge moments the system is designed to plan.
 
-<table>
-  <tr>
-    <td width="33%">
-      <strong>Urban interruption</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-01.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-01.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-01.mp4">Open MP4</a>
-
+### case 1
 https://github.com/user-attachments/assets/a438c6b3-3d41-4032-8f82-cf1b9c696077
 
+### case 2
+https://github.com/user-attachments/assets/7ff163a8-137c-430b-86c0-c9961e19398d
 
-    </td>
-    <td width="33%">
-      <strong>Interface curiosity</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-02.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-02.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-02.mp4">Open MP4</a>
-    </td>
-    <td width="33%">
-      <strong>Product-as-hero motion</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-03.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-03.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-03.mp4">Open MP4</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%">
-      <strong>Self-relevance routine</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-04.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-04.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-04.mp4">Open MP4</a>
-    </td>
-    <td width="33%">
-      <strong>Cultural action bridge</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-05.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-05.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-05.mp4">Open MP4</a>
-    </td>
-    <td width="33%">
-      <strong>Close-up behavior proof</strong><br />
-      <video src="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/videos/case-06.mp4" poster="https://raw.githubusercontent.com/NBrangerF/thumb-brake-3s/main/public/readme/video-posters/case-06.mp4.png" controls muted playsinline preload="metadata" width="100%"></video>
-      <br /><a href="./public/readme/videos/case-06.mp4">Open MP4</a>
-    </td>
-  </tr>
-</table>
+### case 3
+https://github.com/user-attachments/assets/93ee4e1f-02ad-43de-91c4-4a79a1c10864
+
+### case 4
+https://github.com/user-attachments/assets/cbb49a85-21df-4ce3-a4ae-b5d50c3ddee2
+
+### case 5
+https://github.com/user-attachments/assets/d4c88dc3-c691-457a-a961-77c07fe55018
+
+### case 6
+https://github.com/user-attachments/assets/1ae75314-1291-46e6-b147-621c75fa371a
+
+
 
 Read the full case notes in [docs/video-cases.md](./docs/video-cases.md).
 
