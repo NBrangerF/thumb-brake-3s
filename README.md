@@ -71,25 +71,41 @@ The current release is **script and prompt generation only**. It does **not** su
 
 These short examples show the kinds of first-second stop signals, scene evidence, and product-bridge moments the system is designed to plan.
 
-### case 1
-https://github.com/user-attachments/assets/a438c6b3-3d41-4032-8f82-cf1b9c696077
 
-### case 2
-https://github.com/user-attachments/assets/7ff163a8-137c-430b-86c0-c9961e19398d
-
-### case 3
-https://github.com/user-attachments/assets/93ee4e1f-02ad-43de-91c4-4a79a1c10864
-
-### case 4
-https://github.com/user-attachments/assets/cbb49a85-21df-4ce3-a4ae-b5d50c3ddee2
-
-### case 5
-https://github.com/user-attachments/assets/d4c88dc3-c691-457a-a961-77c07fe55018
-
-### case 6
-https://github.com/user-attachments/assets/1ae75314-1291-46e6-b147-621c75fa371a
-
-
+<table>
+  <tr>
+    <td width="33%" align="center"><strong>▶ Urban interruption</strong></td>
+    <td width="33%" align="center"><strong>▶ Interface curiosity</strong></td>
+    <td width="33%" align="center"><strong>▶ Product-as-hero motion</strong></td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/a438c6b3-3d41-4032-8f82-cf1b9c696077" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/7ff163a8-137c-430b-86c0-c9961e19398d" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/93ee4e1f-02ad-43de-91c4-4a79a1c10864" controls muted width="100%"></video>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><strong>▶ Self-relevance routine</strong></td>
+    <td width="33%" align="center"><strong>▶ Cultural action bridge</strong></td>
+    <td width="33%" align="center"><strong>▶ Close-up behavior proof</strong></td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/cbb49a85-21df-4ce3-a4ae-b5d50c3ddee2" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/d4c88dc3-c691-457a-a961-77c07fe55018" controls muted width="100%"></video>
+    </td>
+    <td width="33%">
+      <video src="https://github.com/user-attachments/assets/1ae75314-1291-46e6-b147-621c75fa371a" controls muted width="100%"></video>
+    </td>
+  </tr>
+</table>
 
 Read the full case notes in [docs/video-cases.md](./docs/video-cases.md).
 
